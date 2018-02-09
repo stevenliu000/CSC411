@@ -93,21 +93,22 @@ def finite_diff(CostFunction, X, Y, W0, b0, row, col, h):
     #using finite-difference approximation
     W0_h = np.copy(W0)
     W0_h[row,col] = W0_h[row,col] + h
-    return (CostFunction(Y, X, W0_h) - CostFunction(X, Y, W0))/h
+    return (CostFunction(Y, X, W0_h, b0) - CostFunction(X, Y, W0, b0))/h
 
 def part3b():
     np.random.seed(1)
     W0 = np.random.normal(scale = 0.0001, size = (784,10))
     b0 = np.random.normal(scale = 0.0001, size = (10,1))
     W0_h = np.copy(W0)
-    row_ = np.random.randint(0,10,7)
-    col_ = np.random.randint(0,784,7)
+    row_ = np.random.randint(0,784,7)
+    col_ = np.random.randint(0,10,7)
     h = 10**(-6)
     print row_
     print col_
     gradient = Gradient(X_train, Y_train, W0, b0)
     for i in range(7):
-    	print row_[i], col_[i]
+        print W0_h.shape
+        print row_[i], col_[i]
         print(abs(finite_diff(CostFunction, X_train, Y_train, W0, b0, row_[i],\
         	col_[i],h) - gradient[row_[i], col_[i]]))
 
