@@ -19,6 +19,17 @@ from scipy.io import loadmat
 ##############################################################################
 ################################# Import Data ################################
 
+'''
+matrix format description
+Captial letter indicates that they are matrix
+X: n*784
+Y: 10*n
+output: 10*n
+O: 10*n
+b0: 10*1
+W0: 784*10
+'''
+
 def importData():
 	M = loadmat("mnist_all.mat")
 	X_train = np.empty((0,784))
@@ -34,7 +45,7 @@ def importData():
 		Y_train = np.hstack((Y_train, Y))
 
 		name = "test" + str(i)
-		X_test = np.hstack((X_test, M[name]/255.0))
+		X_test = np.vstack((X_test, M[name]/255.0))
 		Y = np.zeros((10,M[name].shape[0]))
 		Y[i,:] = 1
 		Y_test = np.hstack((Y_test, Y))
@@ -54,10 +65,10 @@ def softmax(Y):
     '''Return the output of the softmax function for the matrix of output y. y
     is an NxM matrix where N is the number of outputs for a single case, and M
     is the number of cases'''
-    return exp(Y)/tile(sum(exp(y),0), (len(y),1))
+    return exp(Y)/tile(sum(exp(Y),0), (len(Y),1))
 
 def forward(X, W0, b0):
-    O = dot(W0.T, X) + b0
+    O = dot(W0.T, X.T) + b0
     output = softmax(O)
     return O, output
 
@@ -65,11 +76,6 @@ def forward(X, W0, b0):
 #################################### Part3 ###################################
 
 def CostFunction(X, Y, W0, b0):
-	'''
-	X is the matrix that contains data (in the form of [X_1, X_2, ....]),
-	Y is a matrix that contains the corresponding labels 
-	(in the form of [Y^1, Y^2, ....])
-	'''
 	result = 0
 	output = forward(X, W0, b0)
 	output = log(output)
@@ -91,14 +97,18 @@ def finite_diff(CostFunction, X, Y, W0, b0, row, col, h):
 
 def part3b():
     np.random.seed(1)
-    W0 = np.random.normal(scale = 0.0001, size = (10,784))
-    b0 = np.random.normal(scale = 0.0001, size = 10)
+    W0 = np.random.normal(scale = 0.0001, size = (784,10))
+    b0 = np.random.normal(scale = 0.0001, size = (10,1))
+    W0_h = np.copy(W0)
     row_ = np.random.randint(0,10,7)
     col_ = np.random.randint(0,784,7)
     h = 10**(-6)
+    print row_
+    print col_
     gradient = Gradient(X_train, Y_train, W0, b0)
     for i in range(7):
-        print(abs(finite_diff(f_multi, X_train, Y_train, W0, b0, row_[i], \
+    	print row_[i], col_[i]
+        print(abs(finite_diff(CostFunction, X_train, Y_train, W0, b0, row_[i],\
         	col_[i],h) - gradient[row_[i], col_[i]]))
 
 ##############################################################################
@@ -112,4 +122,4 @@ def part4():
 
 if __name__ == "__main__":
 	X_train, Y_train, X_test, Y_train = importData()
-	part3()
+	part3b()
