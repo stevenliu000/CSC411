@@ -69,31 +69,36 @@ def softmax(Y):
 
 def forward(X, W0, b0):
     O = dot(W0.T, X.T) + b0
+    X = hstack((ones((X.shape[0], 1)), X))
+    W0 = np.vstack((b0.T, W0))
+    O1 = dot(W0.T, X.T) + b0
     output = softmax(O)
+    print O, O1
     return O, output
 
 ##############################################################################
 #################################### Part3 ###################################
 
 def CostFunction(X, Y, W0, b0):
-	result = 0
-	output = forward(X, W0, b0)
-	output = log(output)
-	Y = Y.T
-	for i in range(Y.shape[0]):
-		result += -dot(Y[i,:], P[:,i])
-	return result
+    result = 0
+    O, output = forward(X, W0, b0)
+    output = log(output)
+    Y = Y.T
+    for i in range(Y.shape[0]):
+		result += -dot(Y[i,:], output[:,i])
+    return result
 
 def Gradient(X, Y, W0, b0):
 	O, output = forward(X, W0, b0)
-	return dot((output - Y), X)
+	X = np.hstack(np.ones(X.shape[1],1), X)
+	return dot((output - Y), X).T
 
 def finite_diff(CostFunction, X, Y, W0, b0, row, col, h):
     #function for calculating one component of gradient 
     #using finite-difference approximation
     W0_h = np.copy(W0)
     W0_h[row,col] = W0_h[row,col] + h
-    return (CostFunction(Y, X, W0_h, b0) - CostFunction(X, Y, W0, b0))/h
+    return (CostFunction(X, Y, W0_h, b0) - CostFunction(X, Y, W0, b0))/h
 
 def part3b():
     np.random.seed(1)
@@ -103,20 +108,40 @@ def part3b():
     row_ = np.random.randint(0,784,7)
     col_ = np.random.randint(0,10,7)
     h = 10**(-6)
-    print row_
-    print col_
     gradient = Gradient(X_train, Y_train, W0, b0)
     for i in range(7):
-        print W0_h.shape
-        print row_[i], col_[i]
-        print(abs(finite_diff(CostFunction, X_train, Y_train, W0, b0, row_[i],\
-        	col_[i],h) - gradient[row_[i], col_[i]]))
+        print('The difference on Gradient[%i,%i] is %010.10f' %(row_[i], \
+              col_[i] ,abs(finite_diff(CostFunction, X_train, Y_train, W0, \
+                  b0, row_[i], col_[i],h) - gradient[row_[i], col_[i]])))
 
 ##############################################################################
 #################################### Part4 ###################################
 
+def grad_descent(f, df, x, y, init_t, b0, alpha, EPS=1e-5, max_iter=80000):
+    prev_t = init_t - 10 * EPS
+    t = init_t.copy()
+    iter = 0
+    cost_func_ = []
+    while norm(t - prev_t) > EPS and iter < max_iter:
+        cost_func_.append(f(x,y,t))
+        prev_t = t.copy()
+        t -= alpha * df(x, y, t)
+        if iter % 500 == 0:
+            print "Iter", iter
+            print "Cost", f(x, y, t)
+            print "Gradient: ", df(x, y, t), "\n"
+        iter += 1
+        
+    return t, cost_func_
+
 def part4():
-	return
+	alpha = 1e-5
+	np.random.seed(1)
+	W0 = np.random.normal(scale = 0.0001, size = (784,10))
+	b0 = np.random.normal(scale = 0.0001, size = (10,1))
+	W0, cost_func_ = grad_descent(CostFunction, Gradient, X_train, Y_train, \
+    	W0, alpha)
+	return W0, cost_func_
 
 ##############################################################################
 #################################### Main ####################################
@@ -124,3 +149,4 @@ def part4():
 if __name__ == "__main__":
 	X_train, Y_train, X_test, Y_train = importData()
 	part3b()
+	part4()
