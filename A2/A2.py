@@ -246,9 +246,13 @@ def part5():
 
 def part6():
 	'''
-	Set the w1 to be W0[196,], w2 to be W0[225,]
+	Set the w1 to be W0[196,8], w2 to be W0[225,8]
 	'''
 
+	#plot contour
+	w1 = np.arange(W0b0_part5[196,8]-3, W0b0_part5[196,8]+3)
+	w2 = np.arange(W0b0_part5[225,8]-3, W0b0_part5[225,8]+3)
+	
 	return
 
 ##############################################################################
