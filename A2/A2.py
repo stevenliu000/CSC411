@@ -50,7 +50,7 @@ def importData():
 		Y[i,:] = 1
 		Y_test = np.hstack((Y_test, Y))
 
-	return X_train, Y_train, X_test, Y_train
+	return X_train, Y_train, X_test, Y_test
 
 ##############################################################################
 #################################### Part1 ###################################
@@ -125,8 +125,8 @@ def part3b():
 ##############################################################################
 #################################### Part4 ###################################
 
-def grad_descent(f, df, x, y, init_t, alpha, EPS=1e-5, max_iter=80000 \
-	Plot = False):
+def grad_descent(f, df, x, y, init_t, alpha, EPS=1e-5, max_iter=80000, \
+ plotLR = False):
 	prev_t = init_t - 10 * EPS
 	t = init_t.copy()
 	iter = 0
@@ -139,8 +139,8 @@ def grad_descent(f, df, x, y, init_t, alpha, EPS=1e-5, max_iter=80000 \
 		grad = np.vstack((gradW0,gradb0.T))
 
 		cost_func_.append(costFunc)
-		performanceTrain.append(performance(x, y, W0b0))
-		performanceTest.append(performance(X_test,Y_test, W0b0))
+		performanceTrain.append(performance(x, y, t))
+		performanceTest.append(performance(X_test,Y_test, t))
 		prev_t = t.copy()
 		t -= alpha * grad
 		if iter % 500 == 0:
@@ -149,8 +149,8 @@ def grad_descent(f, df, x, y, init_t, alpha, EPS=1e-5, max_iter=80000 \
 			print "Gradient: ", grad, "\n"
 		iter += 1
 		
-	if Plot:
-		fig = plt.figure(4)
+	if plotLR:
+		fig = plt.figure(40)
 		plt.title("Part4: Learning Rate")
 		plt.xlabel('epoch')
 		plt.ylabel('performance on datasets')
@@ -163,22 +163,93 @@ def grad_descent(f, df, x, y, init_t, alpha, EPS=1e-5, max_iter=80000 \
 	return t, cost_func_
 
 def performance(X, Y, W0b0):
-	O, output = forward(X, Y, W0b0)
+	O, output = forward(X, W0b0)
 	cor = 0.
-	for i in range(y.shape[1]):
-		if y[np.argmax(output[:,i]),i] == 1:
+	for i in range(Y.shape[1]):
+		if Y[np.argmax(output[:,i]),i] == 1:
 			cor += 1.
-	return cor/y.shape[1]
+	return cor/Y.shape[1]
 
 def part4():
-	alpha = 1e-5
+	alpha = 5e-6
 	np.random.seed(1)
 	W0 = np.random.normal(scale = 0.0001, size = (784,10))
 	b0 = np.random.normal(scale = 0.0001, size = (10,1))
 	W0b0 = np.vstack((W0, b0.T))
-	W0b0, cost_func_ = grad_descent(CostFunction, Gradient, X_train, Y_train, \
-		W0b0, alpha)
-	return W0b0, cost_func_
+	W0b0_part4, cost_func_part4 = grad_descent(CostFunction, Gradient, \
+		X_train, Y_train, W0b0, alpha, plotLR = True, max_iter = 1500)
+
+	for i in range(10):
+		fig = plt.figure(i)
+		plt.title("Part4: Image of %i" %(i))
+		plt.imshow(W0b0_part4[:-1,i].reshape(28,28))
+		fig.savefig(dirpath + '/part4_' + str(i) + '.jpg')
+		plt.show()
+
+	return W0b0_part4, cost_func_part4
+
+##############################################################################
+#################################### Part5 ###################################
+
+def grad_descent_part5(f, df, x, y, init_t, alpha, EPS=1e-5, max_iter=80000, \
+ plotLR = False, gamma = 0.9):
+	prev_t = init_t - 10 * EPS
+	t = init_t.copy()
+	iter = 0
+	v = 0
+	cost_func_ = []
+	performanceTrain = []
+	performanceTest = []
+	while norm(t - prev_t) > EPS and iter < max_iter:
+		costFunc = f(x, y, t)
+		gradW0, gradb0 = df(x, y, t)
+		grad = np.vstack((gradW0,gradb0.T))
+
+		cost_func_.append(costFunc)
+		performanceTrain.append(performance(x, y, t))
+		performanceTest.append(performance(X_test,Y_test, t))
+		prev_t = t.copy()
+		v = gamma*v + alpha*grad
+		t -= v
+		if iter % 500 == 0:
+			print "Iter", iter
+			print "Cost", costFunc
+			print "Gradient: ", grad, "\n"
+		iter += 1
+		
+	if plotLR:
+		fig = plt.figure(40)
+		plt.title("Part4: Learning Rate")
+		plt.xlabel('epoch')
+		plt.ylabel('performance on datasets')
+		plt.plot(range(iter),performanceTrain,'-1', label = 'train')
+		plt.plot(range(iter),performanceTest,'-2', label = 'test')
+		plt.legend(loc='lower right')
+		fig.savefig(dirpath + '/part5_LearningRate.jpg')
+		plt.show()
+
+	return t, cost_func_
+
+def part5():
+	alpha = 1e-4
+	np.random.seed(1)
+	W0 = np.random.normal(scale = 0.0001, size = (784,10))
+	b0 = np.random.normal(scale = 0.0001, size = (10,1))
+	W0b0 = np.vstack((W0, b0.T))
+	W0b0_part5, cost_func_part5 = grad_descent_part5(CostFunction, Gradient, \
+		X_train, Y_train, W0b0, alpha, plotLR = True, max_iter = 1500)
+
+	return W0b0_part5, cost_func_part5	
+
+##############################################################################
+#################################### Part6 ###################################
+
+def part6():
+	'''
+	Set the w1 to be W0[196,], w2 to be W0[225,]
+	'''
+
+	return
 
 ##############################################################################
 #################################### Main ####################################
@@ -186,6 +257,7 @@ def part4():
 if __name__ == "__main__":
 	os.chdir(os.path.dirname(__file__))
 	dirpath = os.getcwd()
-	X_train, Y_train, X_test, Y_train = importData()
+	X_train, Y_train, X_test, Y_test = importData()
 	part3b()
-	W0b0, cost_func_ = part4()
+	W0b0_part4, cost_func_part4 = part4()
+	W0b0_part5, cost_func_part4 = part5()
