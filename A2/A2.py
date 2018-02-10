@@ -62,91 +62,130 @@ def part1():
 #################################### Part2 ###################################
 
 def softmax(Y):
-    '''Return the output of the softmax function for the matrix of output y. y
-    is an NxM matrix where N is the number of outputs for a single case, and M
-    is the number of cases'''
-    return exp(Y)/tile(sum(exp(Y),0), (len(Y),1))
+	'''Return the output of the softmax function for the matrix of output y. y
+	is an NxM matrix where N is the number of outputs for a single case, and M
+	is the number of cases'''
+	return exp(Y)/tile(sum(exp(Y),0), (len(Y),1))
 
-def forward(X, W0, b0):
-    O = dot(W0.T, X.T) + b0
-    X = hstack((ones((X.shape[0], 1)), X))
-    W0 = np.vstack((b0.T, W0))
-    O1 = dot(W0.T, X.T) + b0
-    output = softmax(O)
-    print O, O1
-    return O, output
+def forward(X, W0b0):
+	W0 = W0b0[:-1,:]
+	b0 = W0b0[-1:,:].T
+	O = dot(W0.T, X.T) + b0
+	output = softmax(O)
+	return O, output
 
 ##############################################################################
 #################################### Part3 ###################################
 
-def CostFunction(X, Y, W0, b0):
-    result = 0
-    O, output = forward(X, W0, b0)
-    output = log(output)
-    Y = Y.T
-    for i in range(Y.shape[0]):
-		result += -dot(Y[i,:], output[:,i])
-    return result
+def CostFunction(X, Y, W0b0):
+	O, output = forward(X,W0b0)
+	return -sum(Y*log(output))
 
-def Gradient(X, Y, W0, b0):
-	O, output = forward(X, W0, b0)
-	X = np.hstack(np.ones(X.shape[1],1), X)
-	return dot((output - Y), X).T
+def Gradient(X, Y, W0b0):
+	'''
+	Return Gradient of W0, Gradient of b0
+	'''
+	O, output = forward(X, W0b0)
+	dy = output - Y
+	return dot(dy, X).T, dot(dy, ones((X.shape[0],1)))
 
-def finite_diff(CostFunction, X, Y, W0, b0, row, col, h):
-    #function for calculating one component of gradient 
-    #using finite-difference approximation
-    W0_h = np.copy(W0)
-    W0_h[row,col] = W0_h[row,col] + h
-    return (CostFunction(X, Y, W0_h, b0) - CostFunction(X, Y, W0, b0))/h
+def finite_diff(CostFunction, X, Y, W0b0, row, col, h):
+	'''
+	function for calculating one component of gradient 
+	using finite-difference approximation
+	'''
+	W0b0_h = np.copy(W0b0)
+	W0b0_h[row,col] = W0b0_h[row,col] + h
+	return (CostFunction(X, Y, W0b0_h) - CostFunction(X, Y, W0b0))/h
+
+def Check_diff(X, Y, W0b0, row, col ,h, gradW0, gradb0):
+	finiteDiff = finite_diff(CostFunction, X, Y, W0b0, row, col ,h)
+	if row == 785:
+		print('The difference on Gradient_of_b0[%i, 1] is %010.10f' %(col, \
+			abs(finiteDiff - gradb0[col,1])))
+	else:
+		print('The difference on Gradient_of_W0[%i,%i] is %010.10f' %(row, \
+			col, abs(finiteDiff - gradW0[row,col])))
+
 
 def part3b():
-    np.random.seed(1)
-    W0 = np.random.normal(scale = 0.0001, size = (784,10))
-    b0 = np.random.normal(scale = 0.0001, size = (10,1))
-    W0_h = np.copy(W0)
-    row_ = np.random.randint(0,784,7)
-    col_ = np.random.randint(0,10,7)
-    h = 10**(-6)
-    gradient = Gradient(X_train, Y_train, W0, b0)
-    for i in range(7):
-        print('The difference on Gradient[%i,%i] is %010.10f' %(row_[i], \
-              col_[i] ,abs(finite_diff(CostFunction, X_train, Y_train, W0, \
-                  b0, row_[i], col_[i],h) - gradient[row_[i], col_[i]])))
+	np.random.seed(1)
+	W0 = np.random.normal(scale = 0.0001, size = (784,10))
+	b0 = np.random.normal(scale = 0.0001, size = (10,1))
+	W0b0 = np.vstack((W0, b0.T))
+	row_ = np.random.randint(0,785,7) 
+	#row = 785 indicates that we are checking for the gradient for b
+	col_ = np.random.randint(0,10,7)
+	h = 10**(-7)
+	gradW0, gradb0 = Gradient(X_train, Y_train, W0b0)
+	for i in range(7):
+		Check_diff(X_train, Y_train, W0b0, row_[i], col_[i] ,h, \
+			gradW0, gradb0)
 
 ##############################################################################
 #################################### Part4 ###################################
 
-def grad_descent(f, df, x, y, init_t, b0, alpha, EPS=1e-5, max_iter=80000):
-    prev_t = init_t - 10 * EPS
-    t = init_t.copy()
-    iter = 0
-    cost_func_ = []
-    while norm(t - prev_t) > EPS and iter < max_iter:
-        cost_func_.append(f(x,y,t))
-        prev_t = t.copy()
-        t -= alpha * df(x, y, t)
-        if iter % 500 == 0:
-            print "Iter", iter
-            print "Cost", f(x, y, t)
-            print "Gradient: ", df(x, y, t), "\n"
-        iter += 1
-        
-    return t, cost_func_
+def grad_descent(f, df, x, y, init_t, alpha, EPS=1e-5, max_iter=80000 \
+	Plot = False):
+	prev_t = init_t - 10 * EPS
+	t = init_t.copy()
+	iter = 0
+	cost_func_ = []
+	performanceTrain = []
+	performanceTest = []
+	while norm(t - prev_t) > EPS and iter < max_iter:
+		costFunc = f(x, y, t)
+		gradW0, gradb0 = df(x, y, t)
+		grad = np.vstack((gradW0,gradb0.T))
+
+		cost_func_.append(costFunc)
+		performanceTrain.append(performance(x, y, W0b0))
+		performanceTest.append(performance(X_test,Y_test, W0b0))
+		prev_t = t.copy()
+		t -= alpha * grad
+		if iter % 500 == 0:
+			print "Iter", iter
+			print "Cost", costFunc
+			print "Gradient: ", grad, "\n"
+		iter += 1
+		
+	if Plot:
+		fig = plt.figure(4)
+		plt.title("Part4: Learning Rate")
+		plt.xlabel('epoch')
+		plt.ylabel('performance on datasets')
+		plt.plot(range(iter),performanceTrain,'-1', label = 'train')
+		plt.plot(range(iter),performanceTest,'-2', label = 'test')
+		plt.legend(loc='lower right')
+		fig.savefig(dirpath + '/part4_LearningRate.jpg')
+		plt.show()
+
+	return t, cost_func_
+
+def performance(X, Y, W0b0):
+	O, output = forward(X, Y, W0b0)
+	cor = 0.
+	for i in range(y.shape[1]):
+		if y[np.argmax(output[:,i]),i] == 1:
+			cor += 1.
+	return cor/y.shape[1]
 
 def part4():
 	alpha = 1e-5
 	np.random.seed(1)
 	W0 = np.random.normal(scale = 0.0001, size = (784,10))
 	b0 = np.random.normal(scale = 0.0001, size = (10,1))
-	W0, cost_func_ = grad_descent(CostFunction, Gradient, X_train, Y_train, \
-    	W0, alpha)
-	return W0, cost_func_
+	W0b0 = np.vstack((W0, b0.T))
+	W0b0, cost_func_ = grad_descent(CostFunction, Gradient, X_train, Y_train, \
+		W0b0, alpha)
+	return W0b0, cost_func_
 
 ##############################################################################
 #################################### Main ####################################
 
 if __name__ == "__main__":
+	os.chdir(os.path.dirname(__file__))
+	dirpath = os.getcwd()
 	X_train, Y_train, X_test, Y_train = importData()
 	part3b()
-	part4()
+	W0b0, cost_func_ = part4()
