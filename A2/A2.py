@@ -244,15 +244,85 @@ def part5():
 ##############################################################################
 #################################### Part6 ###################################
 
-def part6():
+def Gradient_part6(X, Y, W0b0, w1r, w1c, w2r, w2c):
 	'''
-	Set the w1 to be W0[196,8], w2 to be W0[225,8]
+	Return Gradient of W0, Gradient of b0
 	'''
+	O, output = forward(X, W0b0)
+	dy = output - Y
+	return dot(dy[w1c,:], X[:,w1r]), dot(dy[w2c,:], X[:,w2r])
 
-	#plot contour
-	w1 = np.arange(W0b0_part5[196,8]-3, W0b0_part5[196,8]+3)
-	w2 = np.arange(W0b0_part5[225,8]-3, W0b0_part5[225,8]+3)
-	W1, W2 = 
+def CostFunction_part6(X, Y, W0b0, w1, w2, w1r, w1c, w2r, w2c):
+	W0b0Modified = W0b0.copy()
+	W0b0Modified[w1r,w1c] = w1
+	W0b0Modified[w2r,w2c] = w2
+	O, output = forward(X,W0b0Modified)
+	return -sum(Y*log(output))
+
+def grad_descent_part6(f, df, x, y, init_t, alpha, w1r, w1c, w2r, w2c, \
+	EPS=1e-5, max_iter=80000, ifmomentum = False, gamma = 0.9):
+	prev_t = init_t - 10 * EPS
+	t = init_t.copy()
+	iter = 0
+	v = 0
+	cost_func_ = []
+	traj_ = []
+	while norm(t - prev_t) > EPS and iter < max_iter:
+		traj_.append((t[w1r,w1c],t[w2r,w2c]))
+		costFunc = f(x, y, t)
+		gradw1, gradw2 = df(x, y, t, w1r, w1c, w2r, w2c)
+		grad = np.array([gradw1, gradw2])
+		cost_func_.append(costFunc)
+		prev_t = t.copy()
+		if ifmomentum:
+			v = gamma*v + alpha*grad
+		else:
+			v = alpha * grad
+		t[w1r,w1c] -= v[0]
+		t[w2r,w2c] -= v[1]
+		if iter % 500 == 0:
+			print "Iter", iter
+			print "Cost", costFunc
+			print "Gradient: ", grad, "\n"
+		iter += 1
+
+	return traj_
+
+def part6(w1r,w1c,w2r,w2c,alpha1,alpha2):
+	# contrust the contour variables
+	w1_ = np.arange(W0b0_part5[w1r,w1c]-2, W0b0_part5[w1r,w1c]+3, 0.1)
+	w2_ = np.arange(W0b0_part5[w2r,w2c]-2, W0b0_part5[w2r,w2c]+3, 0.1)
+	W1_, W2_ = np.meshgrid(w1_, w2_)
+	CostFunc = np.zeros([w1_.size, w2_.size])
+	if os.path.isfile(dirpath+"/CostFunc_%i_%i_%i_%i.npy"%(w1r,w1c,w2r,w2c)):
+		CostFunc = np.load(dirpath+"/CostFunc_%i_%i_%i_%i.npy"%(w1r,w1c,w2r,w2c))
+	else:
+		for i, w1 in enumerate(w1_):
+			for j, w2 in enumerate(w2_):
+				CostFunc[j,i] = CostFunction_part6(X_train, Y_train, \
+					W0b0_part5,w1, w2, w1r, w1c, w2r, w2c)
+				np.save(dirpath+"/CostFunc_%i_%i_%i_%i"%(w1r,w1c,w2r,w2c), CostFunc)
+
+	# perform gradient descents w/ or wo/ momentum
+	W0b0_temp = W0b0_part5.copy()
+	W0b0_temp[w1r,w1c] = -2
+	W0b0_temp[w2r,w2c] = -2
+	gd_traj = grad_descent_part6(CostFunction, Gradient_part6, X_train, Y_train, W0b0_temp, alpha1 , w1r, w1c, w2r, w2c, max_iter=20)
+	W0b0_temp = W0b0_part5.copy()
+	W0b0_temp[w1r,w1c] = -2
+	W0b0_temp[w2r,w2c] = -2
+	mo_traj = grad_descent_part6(CostFunction, Gradient_part6, X_train, Y_train, W0b0_temp, alpha2 , w1r, w1c, w2r, w2c, max_iter=20, ifmomentum =True)
+
+	#plot
+	fig = plt.figure(60)
+	CS = plt.contour(W1_, W2_, CostFunc, cmap = cm.coolwarm)
+	plt.plot([a for a, b in gd_traj], [b for a,b in gd_traj], 'yo-', label="No Momentum")
+	plt.plot([a for a, b in mo_traj], [b for a,b in mo_traj], 'go-', label="Momentum")
+	plt.legend(loc='top left')
+	plt.title('alpha without mom.:%07.7f, alpha with mom.:%07.7f'%(alpha1,alpha2))
+	plt.xlabel('w1: W[%i,%i]' %(w1r,w1c))
+	plt.ylabel('w2: W[%i,%i]' %(w2r,w2c))
+	fig.savefig(dirpath + '/part6_%i_%i_%i_%i.jpg'%(w1r,w1c,w2r,w2c))
 	return
 
 ##############################################################################
@@ -265,3 +335,4 @@ if __name__ == "__main__":
 	part3b()
 	W0b0_part4, cost_func_part4 = part4()
 	W0b0_part5, cost_func_part4 = part5()
+	#part6(407,1,321,1,1e-3,5e-4,load = True) #overshoot
