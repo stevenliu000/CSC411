@@ -288,10 +288,10 @@ def grad_descent_part6(f, df, x, y, init_t, alpha, w1r, w1c, w2r, w2c, \
 
 	return traj_
 
-def part6(w1r,w1c,w2r,w2c,alpha1,alpha2):
+def part6(w1r,w1c,w2r,w2c,w1i,w2i,alpha1,alpha2):
 	# contrust the contour variables
-	w1_ = np.arange(W0b0_part5[w1r,w1c]-2, W0b0_part5[w1r,w1c]+3, 0.1)
-	w2_ = np.arange(W0b0_part5[w2r,w2c]-2, W0b0_part5[w2r,w2c]+3, 0.1)
+	w1_ = np.arange(-2, 2, 0.5)
+	w2_ = np.arange(-2, 2, 0.5)
 	W1_, W2_ = np.meshgrid(w1_, w2_)
 	CostFunc = np.zeros([w1_.size, w2_.size])
 	if os.path.isfile(dirpath+"/CostFunc_%i_%i_%i_%i.npy"%(w1r,w1c,w2r,w2c)):
@@ -305,12 +305,12 @@ def part6(w1r,w1c,w2r,w2c,alpha1,alpha2):
 
 	# perform gradient descents w/ or wo/ momentum
 	W0b0_temp = W0b0_part5.copy()
-	W0b0_temp[w1r,w1c] = -2
-	W0b0_temp[w2r,w2c] = -2
+	W0b0_temp[w1r,w1c] = w1i
+	W0b0_temp[w2r,w2c] = w2i
 	gd_traj = grad_descent_part6(CostFunction, Gradient_part6, X_train, Y_train, W0b0_temp, alpha1 , w1r, w1c, w2r, w2c, max_iter=20)
 	W0b0_temp = W0b0_part5.copy()
-	W0b0_temp[w1r,w1c] = -2
-	W0b0_temp[w2r,w2c] = -2
+	W0b0_temp[w1r,w1c] = w1i
+	W0b0_temp[w2r,w2c] = w2i
 	mo_traj = grad_descent_part6(CostFunction, Gradient_part6, X_train, Y_train, W0b0_temp, alpha2 , w1r, w1c, w2r, w2c, max_iter=20, ifmomentum =True)
 
 	#plot
@@ -319,6 +319,7 @@ def part6(w1r,w1c,w2r,w2c,alpha1,alpha2):
 	plt.plot([a for a, b in gd_traj], [b for a,b in gd_traj], 'yo-', label="No Momentum")
 	plt.plot([a for a, b in mo_traj], [b for a,b in mo_traj], 'go-', label="Momentum")
 	plt.legend(loc='top left')
+	plt.clabel(CS)
 	plt.title('alpha without mom.:%07.7f, alpha with mom.:%07.7f'%(alpha1,alpha2))
 	plt.xlabel('w1: W[%i,%i]' %(w1r,w1c))
 	plt.ylabel('w2: W[%i,%i]' %(w2r,w2c))
@@ -331,8 +332,16 @@ def part6(w1r,w1c,w2r,w2c,alpha1,alpha2):
 if __name__ == "__main__":
 	os.chdir(os.path.dirname(__file__))
 	dirpath = os.getcwd()
-	X_train, Y_train, X_test, Y_test = importData()
-	part3b()
-	W0b0_part4, cost_func_part4 = part4()
-	W0b0_part5, cost_func_part4 = part5()
-	#part6(407,1,321,1,1e-3,5e-4,load = True) #overshoot
+	#X_train, Y_train, X_test, Y_test = importData()
+	#part3b()
+	
+	#W0b0_part4, cost_func_part4 = part4()
+	#np.save(dirpath+'/W0b0_part4',W0b0_part4)
+	#W0b0_part4 = np.load(dirpath+"W0b0_part4.npy")
+	
+	#W0b0_part5, cost_func_part4 = part5()
+	#np.save(dirpath+'/W0b0_part5',W0b0_part5)
+	#W0b0_part5 = np.load(dirpath+"W0b0_part5.npy")
+	
+	#part6(407,1,321,1,-2,-2,1e-3,5e-4) #overshoot
+	part6(249,8,265,8,-2,-0.7,7e-5,1.5e-4)
