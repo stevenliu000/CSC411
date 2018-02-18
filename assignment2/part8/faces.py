@@ -55,11 +55,12 @@ def timeout(func, args=(), kwargs={}, timeout_duration=1, default=None):
 
 def get_sha256(filename):
     '''
-    input: filename
+    input: str filename
     output: correspoding SHA-256 value
     '''
     sha256 = hashlib.sha256()
-    sha256.update(filename)
+    with open(filename, 'rb') as f:
+        sha256.update(f.read())
     return sha256.hexdigest()
 
 def Download():
@@ -96,35 +97,44 @@ def Download():
                     # testfile.retrieve(line.split()[4], "uncropped/"+filename)
                     # timeout is used to stop downloading images which take too long to download
 
-                    sha256 = get_sha256(filename)
-                    if sha256 == line.split()[6]:      #SHA-256 check
 
-                        timeout(testfile.retrieve, (line.split()[4], uncropped_path + filename), {}, 5)
-                        if not os.path.isfile(uncropped_path + filename):
-                            continue
 
+                    timeout(testfile.retrieve, (line.split()[4], uncropped_path + filename), {}, 5)
+                    if not os.path.isfile(uncropped_path + filename):
+                        continue
+
+
+                    #SHA-256 check
+                    sha256 = get_sha256(uncropped_path + filename)
+                    if sha256 != line.split()[6]:      
+                        print "SHA-256 Checking fails for %s, now trying to delete it" %filename
                         try:
-                            uncropped = imread(uncropped_path + filename)
-                            crop_coor = line.split("\t")[4].split(",")
-                            if (uncropped.ndim) == 3:
-                                cropped = uncropped[int(crop_coor[1]):int(crop_coor[3]),
-                                          int(crop_coor[0]):int(crop_coor[2]), :]
-                                resized = imresize(cropped, (32, 32))
-                                grayed = rgb2gray(resized)
-                            elif (uncropped.ndim) == 2:
-                                cropped = uncropped[int(crop_coor[1]):int(crop_coor[3]),
-                                          int(crop_coor[0]):int(crop_coor[2])]
-                                resized = imresize(cropped, (32, 32))
-                                grayed = resized / 255.
+                            os.remove(dirpath+filename)
                         except:
-                            continue
+                            print "Cannot remove the file!!"
+                        continue
 
+                    try:
+                        uncropped = imread(uncropped_path + filename)
+                        crop_coor = line.split("\t")[4].split(",")
+                        if (uncropped.ndim) == 3:
+                            cropped = uncropped[int(crop_coor[1]):int(crop_coor[3]),
+                                      int(crop_coor[0]):int(crop_coor[2]), :]
+                            resized = imresize(cropped, (32, 32))
+                            grayed = rgb2gray(resized)
+                        elif (uncropped.ndim) == 2:
+                            cropped = uncropped[int(crop_coor[1]):int(crop_coor[3]),
+                                      int(crop_coor[0]):int(crop_coor[2])]
+                            resized = imresize(cropped, (32, 32))
+                            grayed = resized / 255.
+                    except:
+                        continue
 
+                    plt.imsave(cropped_path + filename, grayed, cmap = cm.gray)
 
-                        imsave(cropped_path + filename, grayed, cmap = cm.gray)
+                    print filename
+                    i += 1
 
-                        print filename
-                        i += 1
         return
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
