@@ -109,33 +109,31 @@ def Download():
                     if sha256 != line.split()[6]:      
                         print "SHA-256 Checking fails for %s, now trying to delete it" %filename
                         try:
-                            os.remove(dirpath+filename)
+                            os.remove(uncropped_path + filename)
+                            print "Delete successfully!"
                         except:
                             print "Cannot remove the file!!"
                         continue
 
+                    #Crop images
                     try:
                         uncropped = imread(uncropped_path + filename)
                         crop_coor = line.split("\t")[4].split(",")
                         if (uncropped.ndim) == 3:
                             cropped = uncropped[int(crop_coor[1]):int(crop_coor[3]),
                                       int(crop_coor[0]):int(crop_coor[2]), :]
-                            resized = imresize(cropped, (32, 32))
-                            grayed = rgb2gray(resized)
                         elif (uncropped.ndim) == 2:
                             cropped = uncropped[int(crop_coor[1]):int(crop_coor[3]),
                                       int(crop_coor[0]):int(crop_coor[2])]
-                            resized = imresize(cropped, (32, 32))
-                            grayed = resized / 255.
                     except:
                         continue
 
-                    plt.imsave(cropped_path + filename, grayed, cmap = cm.gray)
+                    plt.imsave(cropped_path + filename, cropped)
 
                     print filename
                     i += 1
 
-        return
+    return
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Part2
