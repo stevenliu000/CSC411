@@ -1,0 +1,101 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Part1
+def rgb2gray(rgb):
+    '''Return the grayscale version of the RGB image rgb as a 2D numpy array
+    whose range is 0..1
+    Arguments:
+    rgb -- an RGB image, represented as a numpy array of size n x m x 3. The
+    range of the values is 0..255
+    '''
+
+    r, g, b = rgb[:, :, 0], rgb[:, :, 1], rgb[:, :, 2]
+    gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
+
+    return gray / 255.
+
+
+def timeout(func, args=(), kwargs={}, timeout_duration=1, default=None):
+    '''From:
+    http://code.activestate.com/recipes/473878-timeout-function-using-threading/'''
+    import threading
+    class InterruptableThread(threading.Thread):
+        def __init__(self):
+            threading.Thread.__init__(self)
+            self.result = None
+
+        def run(self):
+            try:
+                self.result = func(*args, **kwargs)
+            except:
+                self.result = default
+
+    it = InterruptableThread()
+    it.start()
+    it.join(timeout_duration)
+    if it.isAlive():
+        return False
+    else:
+        return it.result
+
+
+
+def part1():
+    for act_type in ['actors', 'actresses']:
+        faces_subset = dirpath + "/facescrub_" + act_type + ".txt"
+        uncropped_path = dirpath + "/facescrub_" + act_type + "_uncropped/"
+        cropped_path = dirpath + "/facescrub_" + act_type + "_cropped/"
+        if os.path.isdir(uncropped_path):
+            os.unlink(uncropped_path)
+        else:
+            os.makedirs(uncropped_path)
+
+        if os.path.isdir(cropped_path):
+            os.unlink(cropped_path)
+        else:
+            os.makedirs(cropped_path)
+
+        testfile = urllib.URLopener()
+
+        act = list(set([a.split("\t")[0] for a in open(faces_subset).readlines()]))
+
+        # Note: you need to create the uncropped folder first in order
+        # for this to work
+
+        for a in act:
+            # name = a.split()[1].lower()
+            name = a
+            i = 0
+            for line in open(faces_subset):
+                if a in line:
+                    filename = name + str(i) + '.' + line.split()[4].split('.')[-1]
+                    # A version without timeout (uncomment in case you need to
+                    # unsupress exceptions, which timeout() does)
+                    # testfile.retrieve(line.split()[4], "uncropped/"+filename)
+                    # timeout is used to stop downloading images which take too long to download
+                    timeout(testfile.retrieve, (line.split()[4], uncropped_path + filename), {}, 5)
+                    if not os.path.isfile(uncropped_path + filename):
+                        continue
+
+                    try:
+                        uncropped = imread(uncropped_path + filename)
+                        crop_coor = line.split("\t")[4].split(",")
+                        if (uncropped.ndim) == 3:
+                            cropped = uncropped[int(crop_coor[1]):int(crop_coor[3]),
+                                      int(crop_coor[0]):int(crop_coor[2]), :]
+                            resized = imresize(cropped, (32, 32))
+                            grayed = rgb2gray(resized)
+                        elif (uncropped.ndim) == 2:
+                            cropped = uncropped[int(crop_coor[1]):int(crop_coor[3]),
+                                      int(crop_coor[0]):int(crop_coor[2])]
+                            resized = imresize(cropped, (32, 32))
+                            grayed = resized / 255.
+                    except:
+                        continue
+
+
+
+                    imsave(cropped_path + filename, grayed)
+
+                    print filename
+                    i += 1
+        return

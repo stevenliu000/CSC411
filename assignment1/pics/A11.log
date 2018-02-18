@@ -1,0 +1,815 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.22)  29 JAN 2018 15:17
+entering extended mode
+**./A11.tex
+(A11.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+(C:\stuff\Miktex\1\tex\latex\base\article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(C:\stuff\Miktex\1\tex\latex\base\size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\stuff\Miktex\1\tex\latex\fancyhdr\fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
+)
+(C:\stuff\Miktex\1\tex\latex\lastpage\lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+(C:\stuff\Miktex\1\tex\latex\fancyhdr\extramarks.sty
+Package: extramarks 2017/06/30 v3.9a Extra marks for LaTeX
+\@temptokenb=\toks14
+)
+(C:\stuff\Miktex\1\tex\latex\graphics\color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(C:\stuff\Miktex\1\tex\latex\graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+(C:\stuff\Miktex\1\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(C:\stuff\Miktex\1\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(C:\stuff\Miktex\1\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+)
+(C:\stuff\Miktex\1\tex\latex\graphics\dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+(C:\stuff\Miktex\1\tex\latex\graphics\graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\stuff\Miktex\1\tex\latex\graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(C:\stuff\Miktex\1\tex\latex\graphics\graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\stuff\Miktex\1\tex\latex\graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\stuff\Miktex\1\tex\latex\graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(C:\stuff\Miktex\1\tex\latex\caption\subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+(C:\stuff\Miktex\1\tex\latex\caption\caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(C:\stuff\Miktex\1\tex\latex\caption\caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@tempdima=\dimen108
+\caption@indent=\dimen109
+\caption@parindent=\dimen110
+\caption@hangindent=\dimen111
+)
+\c@ContinuedFloat=\count88
+)
+\c@subfigure=\count89
+\c@subtable=\count90
+)
+(C:\stuff\Miktex\1\tex\latex\listings\listings.sty
+\lst@mode=\count91
+\lst@gtempboxa=\box26
+\lst@token=\toks16
+\lst@length=\count92
+\lst@currlwidth=\dimen112
+\lst@column=\count93
+\lst@pos=\count94
+\lst@lostspace=\dimen113
+\lst@width=\dimen114
+\lst@newlines=\count95
+\lst@lineno=\count96
+\lst@maxwidth=\dimen115
+
+(C:\stuff\Miktex\1\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count97
+\lst@skipnumbers=\count98
+\lst@framebox=\box27
+)
+(C:\stuff\Miktex\1\tex\latex\listings\listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(C:\stuff\Miktex\1\tex\latex\psnfss\courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(C:\stuff\Miktex\1\tex\latex\lipsum\lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count99
+)
+(C:\stuff\Miktex\1\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(C:\stuff\Miktex\1\tex\latex\amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\stuff\Miktex\1\tex\latex\amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen116
+))
+(C:\stuff\Miktex\1\tex\latex\amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen117
+)
+(C:\stuff\Miktex\1\tex\latex\amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count100
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count101
+\leftroot@=\count102
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count103
+\DOTSCASE@=\count104
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen118
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count105
+\c@MaxMatrixCols=\count106
+\dotsspace@=\muskip10
+\c@parentequation=\count107
+\dspbrk@lvl=\count108
+\tag@help=\toks18
+\row@=\count109
+\column@=\count110
+\maxfields@=\count111
+\andhelp@=\toks19
+\eqnshift@=\dimen119
+\alignsep@=\dimen120
+\tagshift@=\dimen121
+\tagwidth@=\dimen122
+\totwidth@=\dimen123
+\lineht@=\dimen124
+\@envbody=\toks20
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(C:\stuff\Miktex\1\tex\latex\oberdiek\grffile.sty
+Package: grffile 2016/05/16 v1.17 Extended file name support for graphics (HO)
+
+(C:\stuff\Miktex\1\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(C:\stuff\Miktex\1\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(C:\stuff\Miktex\1\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(C:\stuff\Miktex\1\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(C:\stuff\Miktex\1\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(C:\stuff\Miktex\1\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(C:\stuff\Miktex\1\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 486.
+)
+(C:\stuff\Miktex\1\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+\c@homeworkProblemCounter=\count112
+
+No file A11.aux.
+\openout1 = `A11.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 177.
+(C:\stuff\Miktex\1\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count113
+\scratchdimen=\dimen125
+\scratchbox=\box30
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen126
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
+\everyMPtoPDFconversion=\toks23
+) (C:\stuff\Miktex\1\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(C:\stuff\Miktex\1\tex\latex\oberdiek\grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(C:\stuff\Miktex\1\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count119
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (18.37552pt too wide) in paragraph at lines 191--192
+[]\OT1/cmr/m/n/10 The dataset used in the project is a sub-set of Face-Scrub da
+taset. (http://vintage.winklerbros.net/facescrub.html).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+ []
+
+
+Overfull \hbox (4.90724pt too wide) in paragraph at lines 193--194
+[]\OT1/cmr/m/n/10 Lorraine Bracco 20815 9613 http://upload.wikimedia.org/wikipe
+dia/commons/1/1b/Lorraine[]Bracco[]HS[]Yea 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+
+Overfull \hbox (1.6424pt too wide) in paragraph at lines 195--196
+[]\OT1/cmr/m/n/10 "Lorraine Bracco" is the ac-tor's name. "http://upload.wikime
+dia.org/wikipedia/commons/1/1b/Lorraine[]Br 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 201.
+
+(C:\stuff\Miktex\1\tex\latex\psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 226.
+
+[2
+
+]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 260.
+ (C:\stuff\Miktex\1\tex\latex\psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 280.
+
+[3]
+
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 306.
+
+[4] <11.jpg, id=29, 572.1375pt x 576.1525pt>
+File: 11.jpg Graphic file (type jpg)
+ <use 11.jpg>
+Package pdftex.def Info: 11.jpg used on input line 317.
+(pdftex.def)             Requested size: 114.42546pt x 115.22845pt.
+
+<12.jpg, id=30, 421.575pt x 632.3625pt>
+File: 12.jpg Graphic file (type jpg)
+ <use 12.jpg>
+Package pdftex.def Info: 12.jpg used on input line 321.
+(pdftex.def)             Requested size: 80.10007pt x 120.15012pt.
+
+<13.jpg, id=31, 301.125pt x 301.125pt>
+File: 13.jpg Graphic file (type jpg)
+ <use 13.jpg>
+Package pdftex.def Info: 13.jpg used on input line 325.
+(pdftex.def)             Requested size: 105.39532pt x 105.39532pt.
+
+<14.jpg, id=32, 2007.5pt x 1003.75pt>
+File: 14.jpg Graphic file (type jpg)
+ <use 14.jpg>
+Package pdftex.def Info: 14.jpg used on input line 334.
+(pdftex.def)             Requested size: 200.76175pt x 100.38087pt.
+
+Overfull \hbox (50.43672pt too wide) in paragraph at lines 334--335
+[][] 
+ []
+
+<15.jpg, id=33, 572.1375pt x 858.20625pt>
+File: 15.jpg Graphic file (type jpg)
+ <use 15.jpg>
+Package pdftex.def Info: 15.jpg used on input line 338.
+(pdftex.def)             Requested size: 74.38048pt x 111.57072pt.
+
+<16.jpg, id=34, 32.12pt x 32.12pt>
+File: 16.jpg Graphic file (type jpg)
+ <use 16.jpg>
+Package pdftex.def Info: 16.jpg used on input line 347.
+(pdftex.def)             Requested size: 64.2398pt x 64.2398pt.
+
+<17.jpg, id=35, 32.12pt x 32.12pt>
+File: 17.jpg Graphic file (type jpg)
+ <use 17.jpg>
+Package pdftex.def Info: 17.jpg used on input line 351.
+(pdftex.def)             Requested size: 64.2398pt x 64.2398pt.
+
+<18.png, id=36, 32.12pt x 32.12pt>
+File: 18.png Graphic file (type png)
+ <use 18.png>
+Package pdftex.def Info: 18.png used on input line 355.
+(pdftex.def)             Requested size: 64.2398pt x 64.2398pt.
+
+Underfull \hbox (badness 5147) in paragraph at lines 356--356
+[]\OT1/cmr/m/n/10 Figure 8: |Frontal
+ []
+
+<19.jpg, id=37, 32.12pt x 32.12pt>
+File: 19.jpg Graphic file (type jpg)
+ <use 19.jpg>
+Package pdftex.def Info: 19.jpg used on input line 359.
+(pdftex.def)             Requested size: 64.2398pt x 64.2398pt.
+
+Underfull \hbox (badness 5147) in paragraph at lines 360--360
+[]\OT1/cmr/m/n/10 Figure 9: |Frontal
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 364.
+
+[5
+
+ <./11.jpg> <./12.jpg> <./13.jpg> <./14.jpg> <./15.jpg> <./16.jpg> <./17.jpg> <
+./18.png (PNG copy)> <./19.jpg>] <110.jpg, id=41, 260.172pt x 390.64865pt>
+File: 110.jpg Graphic file (type jpg)
+
+<use 110.jpg>
+Package pdftex.def Info: 110.jpg used on input line 368.
+(pdftex.def)             Requested size: 130.08566pt x 195.32384pt.
+ <111.jpg, id=42, 32.12pt x 32.12pt>
+File: 111.jpg Graphic file (type jpg)
+ <use 111.jpg>
+Package pdftex.def Info: 111.jpg used on input line 372.
+(pdftex.def)             Requested size: 160.59952pt x 160.59952pt.
+
+<113.jpg, id=43, 200.75pt x 301.125pt>
+File: 113.jpg Graphic file (type jpg)
+ <use 113.jpg>
+Package pdftex.def Info: 113.jpg used on input line 379.
+(pdftex.def)             Requested size: 100.37474pt x 150.56212pt.
+
+<112.jpg, id=44, 32.12pt x 32.12pt>
+File: 112.jpg Graphic file (type jpg)
+ <use 112.jpg>
+Package pdftex.def Info: 112.jpg used on input line 383.
+(pdftex.def)             Requested size: 160.59952pt x 160.59952pt.
+
+
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 388.
+
+[6 <./110.jpg> <./111.jpg> <./113.jpg> <./112.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 394--396
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 432.
+
+[7
+
+]
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 455.
+
+[8]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 471.
+
+ (C:\stuff\Miktex\1\tex\latex\base\omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 471.
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
+
+ []
+
+
+LaTeX Warning: Reference `31' on page 9 undefined on input line 477.
+
+<part3_1.jpg, id=56, 433.62pt x 289.08pt>
+File: part3_1.jpg Graphic file (type jpg)
+ <use part3_1.jpg>
+Package pdftex.def Info: part3_1.jpg used on input line 480.
+(pdftex.def)             Requested size: 346.89647pt x 231.2643pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--491
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--491
+
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 491.
+
+[9
+
+ <./part3_1.jpg>]
+
+LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 535.
+
+[10]
+
+LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 583.
+
+[11] <4.jpg, id=68, 433.62pt x 289.08pt>
+File: 4.jpg Graphic file (type jpg)
+ <use 4.jpg>
+Package pdftex.def Info: 4.jpg used on input line 594.
+(pdftex.def)             Requested size: 346.89647pt x 231.2643pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--602
+
+ []
+
+
+LaTeX Warning: Reference `41' on page 12 undefined on input line 603.
+
+
+LaTeX Warning: Reference `42' on page 12 undefined on input line 603.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
+
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 604.
+
+[12
+
+ <./4.jpg>] <41.jpg, id=72, 433.62pt x 289.08pt>
+File: 41.jpg Graphic file (type jpg)
+ <use 41.jpg>
+Package pdftex.def Info: 41.jpg used on input line 607.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+<42.jpg, id=73, 433.62pt x 289.08pt>
+File: 42.jpg Graphic file (type jpg)
+ <use 42.jpg>
+Package pdftex.def Info: 42.jpg used on input line 611.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+
+LaTeX Warning: Reference `4a' on page 13 undefined on input line 616.
+
+<43.jpg, id=74, 433.62pt x 289.08pt>
+File: 43.jpg Graphic file (type jpg)
+ <use 43.jpg>
+Package pdftex.def Info: 43.jpg used on input line 619.
+(pdftex.def)             Requested size: 173.44492pt x 115.62994pt.
+
+Overfull \hbox (32.517pt too wide) in paragraph at lines 619--620
+[][] 
+ []
+
+<45.jpg, id=75, 433.62pt x 289.08pt>
+File: 45.jpg Graphic file (type jpg)
+ <use 45.jpg>
+Package pdftex.def Info: 45.jpg used on input line 623.
+(pdftex.def)             Requested size: 173.44492pt x 115.62994pt.
+
+Overfull \hbox (32.517pt too wide) in paragraph at lines 623--624
+[][] 
+ []
+
+<44.jpg, id=76, 433.62pt x 289.08pt>
+File: 44.jpg Graphic file (type jpg)
+ <use 44.jpg>
+Package pdftex.def Info: 44.jpg used on input line 627.
+(pdftex.def)             Requested size: 173.44492pt x 115.62994pt.
+
+Overfull \hbox (32.517pt too wide) in paragraph at lines 627--628
+[][] 
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 632.
+
+[13 <./41.jpg> <./42.jpg> <./43.jpg> <./45.jpg> <./44.jpg>]
+<5.jpg, id=81, 433.62pt x 289.08pt>
+File: 5.jpg Graphic file (type jpg)
+ <use 5.jpg>
+Package pdftex.def Info: 5.jpg used on input line 645.
+(pdftex.def)             Requested size: 303.53192pt x 202.35461pt.
+
+<6a.jpg, id=82, 1509.64pt x 2055.68pt>
+File: 6a.jpg Graphic file (type jpg)
+ <use 6a.jpg>
+Package pdftex.def Info: 6a.jpg used on input line 679.
+(pdftex.def)             Requested size: 452.89551pt x 616.70877pt.
+
+
+LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 680.
+
+[14
+
+ <./5.jpg>]
+Overfull \vbox (25.46062pt too high) has occurred while \output is active []
+
+
+
+LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 680.
+
+[15 <./6a.jpg>] <6b.jpg, id=90, 1389.19pt x 1011.78pt>
+File: 6b.jpg Graphic file (type jpg)
+ <use 6b.jpg>
+Package pdftex.def Info: 6b.jpg used on input line 681.
+(pdftex.def)             Requested size: 416.76022pt x 303.53633pt.
+
+
+LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 682.
+
+[16 <./6b.jpg>]
+
+LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 696.
+
+[17
+
+] <part6d_1.jpg, id=97, 433.62pt x 289.08pt>
+File: part6d_1.jpg Graphic file (type jpg)
+ <use part6d_1.jpg>
+Package pdftex.def Info: part6d_1.jpg used on input line 708.
+(pdftex.def)             Requested size: 260.17401pt x 173.44933pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 713--719
+
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 729.
+
+[18
+
+ <./part6d_1.jpg>]
+
+LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 781.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 786--788
+
+ []
+
+
+LaTeX Warning: Reference `71' on page 20 undefined on input line 789.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 789--790
+
+ []
+
+<part7_1.jpg, id=105, 433.62pt x 289.08pt>
+File: part7_1.jpg Graphic file (type jpg)
+ <use part7_1.jpg>
+Package pdftex.def Info: part7_1.jpg used on input line 793.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
+
+LaTeX Warning: Reference `72' on page 20 undefined on input line 798.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 798--799
+
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 800.
+
+[20
+
+ <./part7_1.jpg>] <part7_2.jpg, id=109, 433.62pt x 289.08pt>
+File: part7_2.jpg Graphic file (type jpg)
+
+<use part7_2.jpg>
+Package pdftex.def Info: part7_2.jpg used on input line 803.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 808--809
+
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 818.
+
+[21
+
+ <./part7_2.jpg>] <theta_for_Alec Baldwin.jpg, id=113, 433.62pt x 289.08pt>
+File: theta_for_Alec Baldwin.jpg Graphic file (type jpg)
+
+<use theta_for_Alec Baldwin.jpg>
+Package pdftex.def Info: theta_for_Alec Baldwin.jpg used on input line 827.
+(pdftex.def)             Requested size: 195.1272pt x 130.0848pt.
+
+Overfull \hbox (44.80217pt too wide) in paragraph at lines 827--828
+[][] 
+ []
+
+<theta_for_Angie Harmon.jpg, id=114, 433.62pt x 289.08pt>
+File: theta_for_Angie Harmon.jpg Graphic file (type jpg)
+
+<use theta_for_Angie Harmon.jpg>
+Package pdftex.def Info: theta_for_Angie Harmon.jpg used on input line 831.
+(pdftex.def)             Requested size: 195.1272pt x 130.0848pt.
+
+Overfull \hbox (44.80217pt too wide) in paragraph at lines 831--832
+[][] 
+ []
+
+<theta_for_Bill Hader.jpg, id=115, 433.62pt x 289.08pt>
+File: theta_for_Bill Hader.jpg Graphic file (type jpg)
+
+<use theta_for_Bill Hader.jpg>
+Package pdftex.def Info: theta_for_Bill Hader.jpg used on input line 835.
+(pdftex.def)             Requested size: 195.1272pt x 130.0848pt.
+
+Overfull \hbox (44.80217pt too wide) in paragraph at lines 835--836
+[][] 
+ []
+
+<theta_for_Lorraine Bracco.jpg, id=116, 433.62pt x 289.08pt>
+File: theta_for_Lorraine Bracco.jpg Graphic file (type jpg)
+
+<use theta_for_Lorraine Bracco.jpg>
+Package pdftex.def Info: theta_for_Lorraine Bracco.jpg used on input line 842.
+(pdftex.def)             Requested size: 195.1272pt x 130.0848pt.
+
+Overfull \hbox (44.80217pt too wide) in paragraph at lines 842--843
+[][] 
+ []
+
+<theta_for_Peri Gilpin.jpg, id=117, 433.62pt x 289.08pt>
+File: theta_for_Peri Gilpin.jpg Graphic file (type jpg)
+
+<use theta_for_Peri Gilpin.jpg>
+Package pdftex.def Info: theta_for_Peri Gilpin.jpg used on input line 846.
+(pdftex.def)             Requested size: 195.1272pt x 130.0848pt.
+
+Overfull \hbox (44.80217pt too wide) in paragraph at lines 846--847
+[][] 
+ []
+
+<theta_for_Steve Carell.jpg, id=118, 433.62pt x 289.08pt>
+File: theta_for_Steve Carell.jpg Graphic file (type jpg)
+
+<use theta_for_Steve Carell.jpg>
+Package pdftex.def Info: theta_for_Steve Carell.jpg used on input line 850.
+(pdftex.def)             Requested size: 195.1272pt x 130.0848pt.
+
+Overfull \hbox (44.80217pt too wide) in paragraph at lines 850--851
+[][] 
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 856.
+
+[22
+
+ <./theta_for_Alec Baldwin.jpg> <./theta_for_Angie Harmon.jpg> <./theta_for_Bil
+l Hader.jpg> <./theta_for_Lorraine Bracco.jpg> <./theta_for_Peri Gilpin.jpg> <.
+/theta_for_Steve Carell.jpg>]
+
+Package lastpage Warning: Rerun to get the references right on input line 859.
+
+
+AED: lastpage setting LastPage
+(A11.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5827 strings out of 493323
+ 84075 string characters out of 3143402
+ 313720 words of memory out of 3000000
+ 9286 multiletter control sequences out of 15000+200000
+ 12727 words of font info for 45 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,12n,43p,1288b,1875s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/stuff/Miktex/1/fonts/enc/dvips/base/8r.enc}<C:/stuff/Miktex/1/fonts/type1
+/public/amsfonts/cm/cmbx10.pfb><C:/stuff/Miktex/1/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb><C:/stuff/Miktex/1/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/st
+uff/Miktex/1/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/stuff/Miktex/1/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/stuff/Miktex/1/fonts/type1/public/amsf
+onts/cm/cmmi5.pfb><C:/stuff/Miktex/1/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
+C:/stuff/Miktex/1/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/stuff/Miktex/1/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/stuff/Miktex/1/fonts/type1/public/a
+msfonts/cm/cmr17.pfb><C:/stuff/Miktex/1/fonts/type1/public/amsfonts/cm/cmr5.pfb
+><C:/stuff/Miktex/1/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/stuff/Miktex/1/
+fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/stuff/Miktex/1/fonts/type1/public/a
+msfonts/cm/cmsl10.pfb><C:/stuff/Miktex/1/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/stuff/Miktex/1/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/stuff/Mikte
+x/1/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/stuff/Miktex/1/fonts/type1/ur
+w/courier/ucrr8a.pfb><C:/stuff/Miktex/1/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on A11.pdf (22 pages, 2040904 bytes).
+PDF statistics:
+ 182 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+

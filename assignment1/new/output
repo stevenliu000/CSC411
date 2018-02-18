@@ -1,0 +1,19 @@
+This is the result for part3
+('Cost function on training set:', 0.21649685023182624, 'Normalized:', 0.0015464060730844731)
+('Cost function on validation set:', 18.09173743126312, 'Normalized:', 0.90458687156315598)
+('Performance on training set', 1.0)
+('Performance on validation set', 0.85) 
+
+this is the result for part7
+('Cost function on training set:', 74.955443686355764, 'Normalized:', 12.49257394772596)
+('Cost function on validation set:', 22.737504560791393, 'Normalized:', 3.7895840934652321)
+('Cost function on validation set:', 29.54362318656392, 'Normalized:', 4.9239371977606536)
+('Performance on training set', 0.9832535885167464)
+('Performance on validation set', 0.8333333333333334)
+('Performance on test set', 0.8333333333333334)
+
+Difference in gradient[235, 0] is 0.0000018104
+Difference in gradient[905, 1] is 0.0000017559
+Difference in gradient[715, 4] is 0.0000013999
+Difference in gradient[847, 5] is 0.0000009059
+Difference in gradient[960, 4] is 0.0000011250

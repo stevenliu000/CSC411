@@ -1,0 +1,1166 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=latex 2017.10.12)  25 JAN 2018 21:43
+entering extended mode
+**./Template.tex
+(Template.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+("F:\latex\New folder\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("F:\latex\New folder\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("F:\latex\New folder\tex\latex\fancyhdr\fancyhdr.sty"
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
+)
+("F:\latex\New folder\tex\latex\lastpage\lastpage.sty"
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+("F:\latex\New folder\tex\latex\fancyhdr\extramarks.sty"
+Package: extramarks 2017/06/30 v3.9a Extra marks for LaTeX
+\@temptokenb=\toks14
+)
+("F:\latex\New folder\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("F:\latex\New folder\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvips.def on input line 147.
+
+("F:\latex\New folder\tex\latex\graphics-def\dvips.def"
+File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
+)
+("F:\latex\New folder\tex\latex\graphics\dvipsnam.def"
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+("F:\latex\New folder\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("F:\latex\New folder\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+("F:\latex\New folder\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+("F:\latex\New folder\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("F:\latex\New folder\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 99.
+)
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("F:\latex\New folder\tex\latex\caption\subcaption.sty"
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+("F:\latex\New folder\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("F:\latex\New folder\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@tempdima=\dimen108
+\caption@indent=\dimen109
+\caption@parindent=\dimen110
+\caption@hangindent=\dimen111
+)
+\c@ContinuedFloat=\count87
+)
+\c@subfigure=\count88
+\c@subtable=\count89
+)
+("F:\latex\New folder\tex\latex\listings\listings.sty"
+\lst@mode=\count90
+\lst@gtempboxa=\box26
+\lst@token=\toks16
+\lst@length=\count91
+\lst@currlwidth=\dimen112
+\lst@column=\count92
+\lst@pos=\count93
+\lst@lostspace=\dimen113
+\lst@width=\dimen114
+\lst@newlines=\count94
+\lst@lineno=\count95
+\lst@maxwidth=\dimen115
+
+("F:\latex\New folder\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count96
+\lst@skipnumbers=\count97
+\lst@framebox=\box27
+)
+("F:\latex\New folder\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+("F:\latex\New folder\tex\latex\psnfss\courier.sty"
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+("F:\latex\New folder\tex\latex\lipsum\lipsum.sty"
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count98
+)
+("F:\latex\New folder\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+\c@homeworkProblemCounter=\count99
+ (Template.aux)
+\openout1 = `Template.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 173.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count100
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 175.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 175.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 175.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 175.
+ [1
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 187.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 187.
+
+
+! LaTeX Error: Cannot determine size of graphic in randim.jpg (no BoundingBox).
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.191     \includegraphics[scale=0.5]{randim.jpg}
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: randim.jpg Graphic file (type eps)
+<randim.jpg>
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 192.
+
+ ("F:\latex\New folder\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.25554pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2
+
+]
+
+! LaTeX Error: Cannot determine size of graphic in display_save_25_comps.jpg (n
+o BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.213 ...ics[scale=0.5]{display_save_25_comps.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: display_save_25_comps.jpg Graphic file (type eps)
+<display_save_25_comps.jpg>
+Underfull \hbox (badness 1484) in paragraph at lines 214--214
+[]\OT1/cmr/m/n/10 Figure 2: |The first 25 prin-ci-pal com-po-nents of the ``a"s
+. Gen-er-ated us-ing lines 154-155 and
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in immean.jpg (no BoundingBox).
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.219     \includegraphics[scale=2]{immean.jpg}
+                                               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: immean.jpg Graphic file (type eps)
+<immean.jpg> [3
+
+]
+
+! LaTeX Error: Cannot determine size of graphic in 1pc.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.243 ...udegraphics[width=.35\linewidth]{1pc.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: 1pc.jpg Graphic file (type eps)
+<1pc.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in 5pc.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.248 ...udegraphics[width=.35\linewidth]{5pc.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: 5pc.jpg Graphic file (type eps)
+<5pc.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in 25pc.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.253 ...degraphics[width=.35\linewidth]{25pc.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: 25pc.jpg Graphic file (type eps)
+<25pc.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in 100pc.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.258 ...egraphics[width=.35\linewidth]{100pc.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: 100pc.jpg Graphic file (type eps)
+<100pc.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in 150pc.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.263 ...egraphics[width=.35\linewidth]{150pc.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: 150pc.jpg Graphic file (type eps)
+<150pc.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in 200pc.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 ...egraphics[width=.35\linewidth]{200pc.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: 200pc.jpg Graphic file (type eps)
+<200pc.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in 400pc.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.273 ...egraphics[width=.35\linewidth]{400pc.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: 400pc.jpg Graphic file (type eps)
+<400pc.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in all_pc.jpg (no BoundingBox).
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.278 ...graphics[width=.35\linewidth]{all_pc.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: all_pc.jpg Graphic file (type eps)
+<all_pc.jpg>
+Overfull \hbox (25.71852pt too wide) in paragraph at lines 242--282
+[]$[]$ $[]$$[]$
+ []
+
+
+Overfull \hbox (25.71852pt too wide) in paragraph at lines 242--282
+[]$$[]$ $[]$
+ []
+
+[4
+
+]
+Overfull \hbox (5.92326pt too wide) in paragraph at lines 299--303
+[]\OT1/cmr/m/n/10 Noisy im-ages are cre-ated us-ing the func-tion \OT1/pcr/m/n/
+10 salt[]and[]pepper[]noise() \OT1/cmr/m/n/10 (lines 98-106 of \OT1/pcr/m/n/10 
+pca[]example.py\OT1/cmr/m/n/10 ). 
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in a0reconstruction.jpg (no Bou
+ndingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.320 ...idth=.35\linewidth]{a0reconstruction.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0reconstruction.jpg Graphic file (type eps)
+<a0reconstruction.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt05.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.327 ...cs[width=.35\linewidth]{a0noise0pt05.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt05.jpg Graphic file (type eps)
+<a0noise0pt05.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt05reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...th]{a0noise0pt05reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt05reconstruction200PCs.jpg Graphic file (type eps)
+<a0noise0pt05reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt1.jpg (no Bounding
+Box).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.340 ...ics[width=.35\linewidth]{a0noise0pt1.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt1.jpg Graphic file (type eps)
+<a0noise0pt1.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt1reconstruction200
+PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.346 ...dth]{a0noise0pt1reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt1reconstruction200PCs.jpg Graphic file (type eps)
+<a0noise0pt1reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt2.jpg (no Bounding
+Box).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.353 ...ics[width=.35\linewidth]{a0noise0pt2.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt2.jpg Graphic file (type eps)
+<a0noise0pt2.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt2reconstruction200
+PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.359 ...dth]{a0noise0pt2reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt2reconstruction200PCs.jpg Graphic file (type eps)
+<a0noise0pt2reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt3.jpg (no Bounding
+Box).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.366 ...ics[width=.35\linewidth]{a0noise0pt3.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt3.jpg Graphic file (type eps)
+<a0noise0pt3.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt3reconstruction200
+PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.372 ...dth]{a0noise0pt3reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt3reconstruction200PCs.jpg Graphic file (type eps)
+<a0noise0pt3reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt45.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.379 ...cs[width=.35\linewidth]{a0noise0pt45.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt45.jpg Graphic file (type eps)
+<a0noise0pt45.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt45reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.385 ...th]{a0noise0pt45reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt45reconstruction200PCs.jpg Graphic file (type eps)
+<a0noise0pt45reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt60.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.392 ...cs[width=.35\linewidth]{a0noise0pt60.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt60.jpg Graphic file (type eps)
+<a0noise0pt60.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a0noise0pt60reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.398 ...th]{a0noise0pt60reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a0noise0pt60reconstruction200PCs.jpg Graphic file (type eps)
+<a0noise0pt60reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2reconstruction.jpg (no Bou
+ndingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 ...idth=.35\linewidth]{a2reconstruction.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2reconstruction.jpg Graphic file (type eps)
+<a2reconstruction.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt05.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.419 ...cs[width=.35\linewidth]{a2noise0pt05.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt05.jpg Graphic file (type eps)
+<a2noise0pt05.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt05reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.425 ...th]{a2noise0pt05reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt05reconstruction200PCs.jpg Graphic file (type eps)
+<a2noise0pt05reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt1.jpg (no Bounding
+Box).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.432 ...ics[width=.35\linewidth]{a2noise0pt1.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt1.jpg Graphic file (type eps)
+<a2noise0pt1.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt1reconstruction200
+PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.438 ...dth]{a2noise0pt1reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt1reconstruction200PCs.jpg Graphic file (type eps)
+<a2noise0pt1reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt2.jpg (no Bounding
+Box).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.445 ...ics[width=.35\linewidth]{a2noise0pt2.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt2.jpg Graphic file (type eps)
+<a2noise0pt2.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt2reconstruction200
+PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.451 ...dth]{a2noise0pt2reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt2reconstruction200PCs.jpg Graphic file (type eps)
+<a2noise0pt2reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt3.jpg (no Bounding
+Box).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.458 ...ics[width=.35\linewidth]{a2noise0pt3.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt3.jpg Graphic file (type eps)
+<a2noise0pt3.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt3reconstruction200
+PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.464 ...dth]{a2noise0pt3reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt3reconstruction200PCs.jpg Graphic file (type eps)
+<a2noise0pt3reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt45.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 ...cs[width=.35\linewidth]{a2noise0pt45.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt45.jpg Graphic file (type eps)
+<a2noise0pt45.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt45reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.477 ...th]{a2noise0pt45reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt45reconstruction200PCs.jpg Graphic file (type eps)
+<a2noise0pt45reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt60.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.484 ...cs[width=.35\linewidth]{a2noise0pt60.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt60.jpg Graphic file (type eps)
+<a2noise0pt60.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a2noise0pt60reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.490 ...th]{a2noise0pt60reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a2noise0pt60reconstruction200PCs.jpg Graphic file (type eps)
+<a2noise0pt60reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10reconstruction.jpg (no Bo
+undingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.502 ...dth=.35\linewidth]{a10reconstruction.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10reconstruction.jpg Graphic file (type eps)
+<a10reconstruction.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt05.jpg (no Boundi
+ngBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.509 ...s[width=.35\linewidth]{a10noise0pt05.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt05.jpg Graphic file (type eps)
+<a10noise0pt05.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt05reconstruction2
+00PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.515 ...h]{a10noise0pt05reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt05reconstruction200PCs.jpg Graphic file (type eps)
+<a10noise0pt05reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt1.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.522 ...cs[width=.35\linewidth]{a10noise0pt1.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt1.jpg Graphic file (type eps)
+<a10noise0pt1.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt1reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.528 ...th]{a10noise0pt1reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt1reconstruction200PCs.jpg Graphic file (type eps)
+<a10noise0pt1reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt2.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.535 ...cs[width=.35\linewidth]{a10noise0pt2.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt2.jpg Graphic file (type eps)
+<a10noise0pt2.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt2reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.541 ...th]{a10noise0pt2reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt2reconstruction200PCs.jpg Graphic file (type eps)
+<a10noise0pt2reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt3.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.548 ...cs[width=.35\linewidth]{a10noise0pt3.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt3.jpg Graphic file (type eps)
+<a10noise0pt3.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt3reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.554 ...th]{a10noise0pt3reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt3reconstruction200PCs.jpg Graphic file (type eps)
+<a10noise0pt3reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt45.jpg (no Boundi
+ngBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.561 ...s[width=.35\linewidth]{a10noise0pt45.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt45.jpg Graphic file (type eps)
+<a10noise0pt45.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt45reconstruction2
+00PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.567 ...h]{a10noise0pt45reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt45reconstruction200PCs.jpg Graphic file (type eps)
+<a10noise0pt45reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt60.jpg (no Boundi
+ngBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.574 ...s[width=.35\linewidth]{a10noise0pt60.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt60.jpg Graphic file (type eps)
+<a10noise0pt60.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a10noise0pt60reconstruction2
+00PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.580 ...h]{a10noise0pt60reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a10noise0pt60reconstruction200PCs.jpg Graphic file (type eps)
+<a10noise0pt60reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15reconstruction.jpg (no Bo
+undingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.592 ...dth=.35\linewidth]{a15reconstruction.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15reconstruction.jpg Graphic file (type eps)
+<a15reconstruction.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt05.jpg (no Boundi
+ngBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.599 ...s[width=.35\linewidth]{a15noise0pt05.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt05.jpg Graphic file (type eps)
+<a15noise0pt05.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt05reconstruction2
+00PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.605 ...h]{a15noise0pt05reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt05reconstruction200PCs.jpg Graphic file (type eps)
+<a15noise0pt05reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt1.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.612 ...cs[width=.35\linewidth]{a15noise0pt1.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt1.jpg Graphic file (type eps)
+<a15noise0pt1.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt1reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.618 ...th]{a15noise0pt1reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt1reconstruction200PCs.jpg Graphic file (type eps)
+<a15noise0pt1reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt2.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.625 ...cs[width=.35\linewidth]{a15noise0pt2.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt2.jpg Graphic file (type eps)
+<a15noise0pt2.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt2reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.631 ...th]{a15noise0pt2reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt2reconstruction200PCs.jpg Graphic file (type eps)
+<a15noise0pt2reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt3.jpg (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.638 ...cs[width=.35\linewidth]{a15noise0pt3.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt3.jpg Graphic file (type eps)
+<a15noise0pt3.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt3reconstruction20
+0PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.644 ...th]{a15noise0pt3reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt3reconstruction200PCs.jpg Graphic file (type eps)
+<a15noise0pt3reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt45.jpg (no Boundi
+ngBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.651 ...s[width=.35\linewidth]{a15noise0pt45.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt45.jpg Graphic file (type eps)
+<a15noise0pt45.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt45reconstruction2
+00PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.657 ...h]{a15noise0pt45reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt45reconstruction200PCs.jpg Graphic file (type eps)
+<a15noise0pt45reconstruction200PCs.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt60.jpg (no Boundi
+ngBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.664 ...s[width=.35\linewidth]{a15noise0pt60.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt60.jpg Graphic file (type eps)
+<a15noise0pt60.jpg>
+
+! LaTeX Error: Cannot determine size of graphic in a15noise0pt60reconstruction2
+00PCs.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.670 ...h]{a15noise0pt60reconstruction200PCs.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: a15noise0pt60reconstruction200PCs.jpg Graphic file (type eps)
+<a15noise0pt60reconstruction200PCs.jpg> [5
+
+] [6] [7] [8] [9]
+
+AED: lastpage setting LastPage
+(Template.aux) ) 
+Here is how much of TeX's memory you used:
+ 3890 strings out of 493324
+ 60740 string characters out of 3142522
+ 255937 words of memory out of 3000000
+ 7361 multiletter control sequences out of 15000+200000
+ 10031 words of font info for 35 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,12n,43p,1050b,481s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on Template.dvi (9 pages, 22124 bytes).
