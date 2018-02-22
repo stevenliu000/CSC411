@@ -183,49 +183,6 @@ def get_data(S, act, grayed = True, s = 0):
 
     return act_data which is a dictionary whose key is the name of actor/actress, value is the 3-element long array that the first element is a array that contains the training set, second one contains validation set, third one contains test set.
     '''
-    
-    '''
-    act_rawdata = {}
-    act_data = {}
-    for i in act:
-        act_rawdata[i] = np.empty((S[0]*S[0],0))
-        act_data[i] = [0, 0, 0]
-
-    for act_type in ['actors', 'actresses']:
-        if grayed:
-            dataset_path = dirpath + "/facescrub_%s_%i_grayed/" %(act_type, S[0])
-        else:
-            dataset_path = dirpath + "/facescrub_%s_%i/" %(act_type, S[0])
-        for root, dirs, files in os.walk(dataset_path):
-            dirs.sort()
-            files.sort()
-            for filename in files:
-                im = imread(dataset_path + filename)
-                im = im/255.
-                im = np.array([im.flatten()]).T
-                if np.amax(im) > 1.0 or np.amin(im) < 0. or np.isnan(im).any() or np.isinf(im).any():
-                    continue
-                else:
-                    for i in act:
-                        if i in filename:
-                            act_rawdata[i] = np.hstack((act_rawdata[i], im))
-
-    # randomly shuffle act_rawdata
-    np.random.seed(s)
-    for i in act:
-        act_rawdata[i] = act_rawdata[i][:,np.random.permutation(act_rawdata[i].shape[1])]
-
-    # construct output act_data
-    for i in act:
-        act_data[i][0] = act_rawdata[i][:, :min(70, act_rawdata[i].shape[1] - 30)]
-        act_data[i][1] = act_rawdata[i][:, -20:-10]
-        act_data[i][2] = act_rawdata[i][:, -20:]
-
-    return act_data
-
-    '''
-
-
 
     act_rawdata = {}
     act_data = {}

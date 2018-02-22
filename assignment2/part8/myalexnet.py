@@ -8,6 +8,9 @@ import numpy as np
 import  matplotlib.pyplot as plt
 from scipy.misc import imread, imresize
 
+# a list of class names
+from caffe_classes import class_names
+
 import torch.nn as nn
 
 
@@ -89,8 +92,6 @@ def get_data(S, act, grayed = False, s = 0):
 
 
 
-# a list of class names
-from caffe_classes import class_names
 
 # We modify the torchvision implementation so that the features
 # after the final pooling layer is easily accessible by calling
@@ -129,13 +130,8 @@ class MyAlexNet(nn.Module):
             nn.MaxPool2d(kernel_size=3, stride=2),
         )
         self.classifier = nn.Sequential(
-            nn.Dropout(),
-            nn.Linear(256 * 6 * 6, 4096),
-            nn.ReLU(inplace=True),
-            nn.Dropout(),
-            nn.Linear(4096, 4096),
-            nn.ReLU(inplace=True),
-            nn.Linear(4096, num_classes),
+            nn.Linear(256 * 6 * 6, )
+            nn.Softmax()
         )
         
         self.load_weights()
@@ -170,6 +166,12 @@ for i in range(-1, -6, -1):
 ans = np.argmax(model.forward(im_v).data.numpy())
 prob_ans = softmax(model.forward(im_v)).data.numpy()[0][ans]
 print("Top Answer:", class_names[ans], "P(ans) = ", prob_ans)
+
+
+
+
+def part10():
+    
 
 
 
