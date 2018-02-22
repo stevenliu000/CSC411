@@ -418,7 +418,7 @@ def part9(S):
 
     for i in range(12):
         fig = plt.figure(90+i)
-        plt.imshow(model[0].weight.data.numpy()[10, :].reshape(S), cmap=plt.cm.coolwarm)
+        plt.imshow(model[0].weight.data.numpy()[i, :].reshape(S), cmap=plt.cm.coolwarm)
         fig.savefig(dirpath + '/part9_%i.jpg'%i)
         plt.show()
 
