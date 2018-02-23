@@ -70,6 +70,7 @@ def get_sha256(filename):
 def Download():
     for act_type in ['actors', 'actresses']:
         faces_subset = dirpath + "/facescrub_" + act_type + ".txt"
+        # The folder for uncropped and cropped images
         uncropped_path = dirpath + "/facescrub_" + act_type + "_uncropped/"
         cropped_path = dirpath + "/facescrub_" + act_type + "_cropped/"
         if os.path.isdir(uncropped_path):
@@ -132,6 +133,7 @@ def Download():
                     except:
                         continue
 
+                    # Save image
                     plt.imsave(cropped_path + filename, cropped)
 
                     print filename
@@ -147,6 +149,7 @@ def Resize(S, grayed = True):
     '''
     hardcode_list = ['Kristin Chenoweth71.jpg']
     for act_type in ['actors', 'actresses']:
+        # Create the folders to save resized pictures
         if grayed:
             store_path = dirpath + "/facescrub_%s_%i_grayed/" %(act_type, S[0])
         else:
@@ -159,7 +162,9 @@ def Resize(S, grayed = True):
             for filename in files:
                 if filename not in hardcode_list:
                     im = imread(dataset_path + filename, mode='RGB')
+                    # REsize image
                     resized = imresize(im, S)
+                    # Save the image after resize (and grey)
                     if grayed:
                         if im.ndim == 3:
                             resized = rgb2gray(resized)
@@ -177,11 +182,11 @@ def Resize(S, grayed = True):
 
 def get_data(S, act, grayed = True, s = 0):
     '''
-    input: S is the size of imgaes, grayed is whether the images are grayed, s is the random seed
-
-    Getting validation sets and training sets.
-
-    return act_data which is a dictionary whose key is the name of actor/actress, value is the 3-element long array that the first element is a array that contains the training set, second one contains validation set, third one contains test set.
+    input: S is the size of imgaes, grayed is whether the images are grayed,   
+    s is the random seed getting validation sets and training sets.
+    return: act_data which is a dictionary whose key is the name of actor/actress,     
+    value is the 3-element long array that the first element is a array that contains 
+    the training set, second one contains validation set, third one contains test set.
     '''
 
     act_rawdata = {}
@@ -191,6 +196,7 @@ def get_data(S, act, grayed = True, s = 0):
         act_data[i] = [0, 0, 0]
 
     for act_type in ['actors', 'actresses']:
+        # Find the dataset path
         if grayed:
             dataset_path = dirpath + "/facescrub_%s_%i_grayed/" %(act_type, S[0])
         else:
@@ -202,6 +208,7 @@ def get_data(S, act, grayed = True, s = 0):
                 im = imread(dataset_path + filename)
                 im = im/255.
                 im = np.array([im[:,:,0].flatten()]).T
+                # Check if any images contains error, or not suitable for model
                 if np.amax(im) > 1.0 or np.amin(im) < 0. or np.isnan(im).any() or np.isinf(im).any():
                     continue
                 else:
@@ -214,9 +221,9 @@ def get_data(S, act, grayed = True, s = 0):
     for i in act:
         act_rawdata[i] = act_rawdata[i][:,np.random.permutation(act_rawdata[i].shape[1])]
 
-    # act_data is a dictionary whose key is the name of actor/actress, value is the 3-element long array that the first
-    # element is a array that contains the training set, second one contains validation set, third one
-    # contains test set.
+    # act_data is a dictionary whose key is the name of actor/actress, value is 
+    # the 3-element long array that the first element is a array that contains the 
+    # training set, second one contains validation set, third one contains test set.
     for i in act:
         act_data[i][0] = act_rawdata[i][:, :min(70, act_rawdata[i].shape[1] - 30)]
         act_data[i][1] = act_rawdata[i][:, -30:-20]
@@ -305,9 +312,15 @@ def Run(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
 
 
     # define model
+    # All neurons are fully connected
+    # 32x32 units import
+    # 12 neurons at the hidden layer, activation function on this layer is tanh
+    # 6 output neurons at the output layer, no activation function is used
+    # Softmax applied to the output neurons
     model = torch.nn.Sequential(
         torch.nn.Linear(S[0]*S[0], 12),
         torch.nn.Tanh(),
+        #torch.nn.ReLU(),
         torch.nn.Linear(12, len(act1)),
         torch.nn.Softmax()
     )
@@ -315,7 +328,7 @@ def Run(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
     # define loss function
     loss_fn = torch.nn.CrossEntropyLoss()
 
-    # initialize weight
+    # initialize weight for each layer
     model[0].weight.data.normal_(0.0,0.01)
     model[2].weight.data.normal_(0.0,0.01)
     model[0].bias.data.normal_(0.0,0.01)
@@ -341,6 +354,7 @@ def Run(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
             optimizer.step()   # Use the gradient information to make a step
 
         # calculate the performance
+        # 20 images per actor in the test set
         if Epoch % 10 == 0:
             print "The current epoch is %i"%Epoch
             num_epoch.append(Epoch)
@@ -357,9 +371,10 @@ def Run(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
     plt.title('Part 8: Learning Rate')
     plt.xlabel('Number of epoches')
     plt.ylabel('Performance')
-    plt.legend(loc = 'upper right')
+    plt.legend(loc = 'lower right')
     fig.savefig(dirpath + '/part8_%i_%i_%i_%07.07f.jpg'%(S[0], batch_size, nEpoch, alpha))
     plt.show()
+    print "The final performance on test set is " + str(perf_test[-1])
 
     return model
 
@@ -369,15 +384,28 @@ def Run(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
 def part9(S):
     '''
     input: S is a tuple of size
-
-    plot the image of weights generated by part 8
+    choose the first and second actor/actress: 'Lorraine Bracco', 'Peri Gilpin'
+    i.e. the corresponding output neurons are 0 and 1
     '''
-
-    for i in range(12):
-        fig = plt.figure(90+i)
-        plt.imshow(model[0].weight.data.numpy()[i, :].reshape(S), cmap=plt.cm.coolwarm)
-        fig.savefig(dirpath + '/part9_%i.jpg'%i)
-        plt.show()
+    # FInd the 4 largest weight from hidden layers to output neuron 0 and 1
+    temp = model[2].weight.data.numpy()[0,:]
+    hidden_0 = temp.argsort()[-4:][::-1]
+    temp2 = model[2].weight.data.numpy()[1,:]
+    hidden_1 = temp2.argsort()[-4:][::-1]
+    
+    # Plot
+    for i in range(len(hidden_0)):
+        if temp[hidden_0[i]] > 0:
+            fig = plt.figure(90+i)
+            plt.imshow(model[0].weight.data.numpy()[hidden_0[i], :].reshape(S), cmap=plt.cm.coolwarm)
+            fig.savefig(dirpath + '/part9_Bracco_%i.jpg' %hidden_0[i])
+            plt.show()
+    for j in range(len(hidden_1)):
+        if temp2[hidden_1[j]] > 0:
+            fig = plt.figure(90+len(hidden_0)+j)
+            plt.imshow(model[0].weight.data.numpy()[hidden_1[j], :].reshape(S), cmap=plt.cm.coolwarm)
+            fig.savefig(dirpath + '/part9_Gilpin_%i.jpg' %hidden_1[j])
+            plt.show()
 
 
 ##############################################################################
@@ -388,6 +416,7 @@ if __name__ == "__main__":
     dirpath = os.getcwd()
     #Download()
     #Resize((32,32))
-    #model = Run((32,32), 10, 1500, alpha = 3e-4, grayed = True, s = 1)
+    # 32 x 32 gray scale image, batch size = 10, epoch = 1500
+    # model = Run((32,32), 10, 1500, alpha = 3e-4, grayed = True, s = 1)
     part9((32,32))
 

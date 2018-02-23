@@ -26,7 +26,7 @@ import torch.nn as nn
 
 def Resize(S, grayed = False):
     '''
-    input: a turple of size. e.g. (32,32)
+    input: a turple of size. e.g. (227,227)
     Resize the cropped images, and store them into XXX_size(_grayed)
     hardcode_list is a list that contains filenames 
     '''
@@ -112,7 +112,8 @@ class MyAlexNet(nn.Module):
         for i in features_weight_i:
             self.features[i].weight = an_builtin.features[i].weight
             self.features[i].bias = an_builtin.features[i].bias
-            
+        
+        # Initilize weights
         classifier_weight_i = [0]
         for i in classifier_weight_i:
             self.classifier[i].weight.data.normal_(0.0,0.01)
@@ -135,6 +136,7 @@ class MyAlexNet(nn.Module):
             nn.ReLU(inplace=True),
             nn.MaxPool2d(kernel_size=3, stride=2),
         )
+        # Addition of the extra layer, the linear function
         self.classifier = nn.Sequential(
             nn.Linear(256 * 6 * 6, 6),
             nn.Softmax()
@@ -148,6 +150,7 @@ class MyAlexNet(nn.Module):
         x = self.classifier(x)
         return x
 
+    # Exrtact the activation on the last layer
     def process_X(self, x):
         x = self.features(x)
         x = x.view(x.size(0), 256 * 6 * 6)
@@ -168,10 +171,11 @@ def part10(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
     This function:
         1. initialize torch seed
         2. get training, validation, and training sets by calling function get_data
+        (but now we are using alexNet activations as inputs)
         3. format training, validation, and training sets
         4. define torch variablaes
         5. initilize dataloader which will be used in minibatch gradient descent
-        6. define model and loss function
+        6. define loss function
         7. initialize weight
         8. define optimizer
         9. minibatch gradient descent and calculate performance in every 5 epoches
@@ -215,8 +219,6 @@ def part10(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
         X_test = np.vstack((X_test, act_data[act1[i]][2]))
         Y_test = np.vstack((Y_test, temp))
 
-    print 1
-
     # define torch variablaes
     dtype_float = torch.FloatTensor
     dtype_long = torch.LongTensor
@@ -239,8 +241,6 @@ def part10(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
     # define optimizer
     optimizer = torch.optim.Adam(model.classifier.parameters(), lr=alpha)
 
-    print 2
-
     # gradient descent
     num_epoch = []
     perf_train = []
@@ -261,9 +261,12 @@ def part10(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
         if Epoch % 10 == 0:
             print "The current epoch is %i"%Epoch
             num_epoch.append(Epoch)
-            perf_train.append(np.mean(np.argmax(model.classifier(X_TRAIN).data.numpy(), 1) == np.argmax(Y_train, 1)))
-            perf_vali.append(np.mean(np.argmax(model.classifier(X_VALI).data.numpy(), 1) == np.argmax(Y_vali, 1)))
-            perf_test.append(np.mean(np.argmax(model.classifier(X_TEST).data.numpy(), 1) == np.argmax(Y_test, 1)))
+            perf_train.append(np.mean(np.argmax(model.classifier(X_TRAIN).data.numpy(), 1) \
+                                      == np.argmax(Y_train, 1)))
+            perf_vali.append(np.mean(np.argmax(model.classifier(X_VALI).data.numpy(), 1) \
+                                     == np.argmax(Y_vali, 1)))
+            perf_test.append(np.mean(np.argmax(model.classifier(X_TEST).data.numpy(), 1) \
+                                     == np.argmax(Y_test, 1)))
 
 
     # plot learning curve
@@ -274,7 +277,7 @@ def part10(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
     plt.title('Part 10: Learning Rate')
     plt.xlabel('Number of epoches')
     plt.ylabel('Performance')
-    plt.legend(loc = 'upper right')
+    plt.legend(loc = 'lower right')
     fig.savefig(dirpath + '/part10_%i_%i_%i_%07.07f.jpg'%(S[0], batch_size, nEpoch, alpha))
     plt.show()
 
