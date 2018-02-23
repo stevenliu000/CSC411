@@ -233,7 +233,7 @@ def get_data(S, act, grayed = True, s = 0):
 ##############################################################################
 ############################### Part 8: Pytorch ##############################
 
-def Run(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
+def Run(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0, layers = 12):
     '''
     input: S is a tuple of size
             batch_size is the size of minbatch used in gradient descent
@@ -318,10 +318,10 @@ def Run(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
     # 6 output neurons at the output layer, no activation function is used
     # Softmax applied to the output neurons
     model = torch.nn.Sequential(
-        torch.nn.Linear(S[0]*S[0], 12),
+        torch.nn.Linear(S[0]*S[0],layers),
         torch.nn.Tanh(),
         #torch.nn.ReLU(),
-        torch.nn.Linear(12, len(act1)),
+        torch.nn.Linear(layers, len(act1)),
         torch.nn.Softmax()
     )
 
@@ -372,7 +372,7 @@ def Run(S, batch_size, nEpoch, alpha = 1e-2, grayed = True, s = 0):
     plt.xlabel('Number of epoches')
     plt.ylabel('Performance')
     plt.legend(loc = 'lower right')
-    fig.savefig(dirpath + '/part8_%i_%i_%i_%07.07f.jpg'%(S[0], batch_size, nEpoch, alpha))
+    fig.savefig(dirpath + '/part8_%i_%i_%i_%07.07f_%i.jpg'%(S[0], batch_size, nEpoch, alpha, layers))
     plt.show()
     print "The final performance on test set is " + str(perf_test[-1])
 
@@ -417,6 +417,6 @@ if __name__ == "__main__":
     #Download()
     #Resize((32,32))
     # 32 x 32 gray scale image, batch size = 10, epoch = 1500
-    # model = Run((32,32), 10, 1500, alpha = 3e-4, grayed = True, s = 1)
-    part9((32,32))
+    model = Run((32,32), 10, 1500, alpha = 3e-4, grayed = True, s = 1, layers = 30)
+    # part9((32,32))
 
