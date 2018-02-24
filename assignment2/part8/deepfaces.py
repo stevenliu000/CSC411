@@ -74,6 +74,8 @@ def get_data(S, act, model, grayed = False, s = 0):
             dirs.sort()
             files.sort()
             for filename in files:
+                
+                # extracting activation data of AlexNet
                 im = imread(dataset_path + filename)[:,:,:3]
                 im = im - np.mean(im.flatten())
                 im = im/np.max(np.abs(im.flatten()))
@@ -89,9 +91,6 @@ def get_data(S, act, model, grayed = False, s = 0):
     for i in act:
         act_rawdata[i] = act_rawdata[i][np.random.permutation(act_rawdata[i].shape[0]),:]
 
-    # act_data is a dictionary whose key is the name of actor/actress, value is the 3-element long array that the first
-    # element is a array that contains the training set, second one contains validation set, third one
-    # contains test set.
     for i in act:
         act_data[i][0] = act_rawdata[i][:min(70, act_rawdata[i].shape[1] - 30),:]
         act_data[i][1] = act_rawdata[i][-30:-20,:]

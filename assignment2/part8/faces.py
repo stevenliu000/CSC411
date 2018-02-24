@@ -415,8 +415,8 @@ if __name__ == "__main__":
     #os.chdir(os.path.dirname(__file__))
     dirpath = os.getcwd()
     #Download()
-    #Resize((32,32))
+    #Resize((64,64))
     # 32 x 32 gray scale image, batch size = 10, epoch = 1500
-    model = Run((32,32), 10, 1500, alpha = 3e-4, grayed = True, s = 1, layers = 30)
+    model = Run((64,64), 10, 1500, alpha = 3e-4, grayed = True, s = 1, layers = 12)
     # part9((32,32))
 
