@@ -1,0 +1,21 @@
+print r"\hline word & P(fake|x=presence) & P(real|x=presence) & Difference \\ \hline"
+for i in np.arange(-1,-11,-1):
+    word = presenceWordsProbDiffOrdered[i]
+    print r"%s & %07.7f & %07.7f & %07.7f \\ \hline"%(word,presenceFakeWordsProb[word],presenceRealWordsProb[word],abs(presenceWordsProbDiff[word]))
+print "\n"
+print r"\hline word & P(fake|x=absence) & P(real|x=absence) & Difference \\ \hline"
+for i in np.arange(-1,-11,-1):
+    word = absenceWordsProbDiffOrdered[i]
+    print r"%s & %07.7f & %07.7f & %07.7f \\ \hline"%(word,absenceFakeWordsProb[word],absenceRealWordsProb[word],abs(absenceWordsProbDiff[word]))
+print "\n"
+
+print r"\hline word & P(fake|x=presence) & P(real|x=presence) & Difference \\ \hline"
+for i in range(0,10):
+    word = presenceWordsProbDiffOrdered[i]
+    print r"%s & %07.7f & %07.7f & %07.7f \\ \hline"%(word,presenceFakeWordsProb[word],presenceRealWordsProb[word],abs(presenceWordsProbDiff[word]))
+print "\n"  
+print r"\hline word & P(fake|x=absence) & P(real|x=absence) & Difference \\ \hline"
+for i in range(0,10):
+    word = absenceWordsProbDiffOrdered[i]
+    print r"%s & %07.7f & %07.7f & %07.7f \\ \hline"%(word,absenceFakeWordsProb[word],absenceRealWordsProb[word],abs(absenceWordsProbDiff[word]))
+print "\n"
