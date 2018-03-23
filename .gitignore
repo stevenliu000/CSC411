@@ -1,2 +1,5 @@
 # Ignore checkpoints for Assignment3
 assignment3/.ipynb_checkpoints/
+
+# Ignore checkpoints for Assignment3 Bonus
+assignment3_bonus/.ipynb_checkpoints/
