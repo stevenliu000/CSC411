@@ -127,7 +127,7 @@ def select_action(policy, state):
 	log_prob = torch.sum(m.log_prob(action))
 	return action.data[0], log_prob
 
-def compute_returns(rewards, gamma=1.0):
+def compute_returns(rewards, gamma=0.9):
 	"""
 	Compute returns for each time step, given the rewards
 	  @param rewards: list of floats, where rewards[t] is the reward
