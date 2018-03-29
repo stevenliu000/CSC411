@@ -12,6 +12,10 @@ import torch.distributions
 from torch.autograd import Variable
 import matplotlib.pyplot as plt
 
+#random seed
+np.random.seed(1)
+torch.manual_seed(1)
+
 class Environment(object):
 	"""
 	The Tic-Tac-Toe Environment
@@ -36,6 +40,11 @@ class Environment(object):
 		self.grid = np.array([0] * 9) # grid
 		self.turn = 1                 # whose turn it is
 		self.done = False             # whether game is done
+
+		#modify
+		self.numStep = 0
+
+
 		return self.grid
 
 	def render(self):
@@ -58,6 +67,12 @@ class Environment(object):
 		"""Mark a point on position action."""
 		assert type(action) == int and action >= 0 and action < 9
 		# done = already finished the game
+
+		#modify
+		self.numStep += 1
+		if self.numStep >= 10000:
+			self.done = True
+			
 		if self.done:
 			return self.grid, self.STATUS_DONE, self.done
 		# action already have something on it
@@ -108,14 +123,14 @@ class Policy(nn.Module):
 		# TODO
 		self.features = nn.Sequential(
 			nn.Linear(input_size, hidden_size),
+			nn.ReLU(),
 			nn.Linear(hidden_size, output_size),
 			nn.Softmax()
 			)
 
 	def forward(self, x):
 		# TODO
-		output = self.features(x)
-		return output
+		return self.features(x)
 
 def select_action(policy, state):
 	"""Samples an action from the policy at the state."""
@@ -127,7 +142,7 @@ def select_action(policy, state):
 	log_prob = torch.sum(m.log_prob(action))
 	return action.data[0], log_prob
 
-def compute_returns(rewards, gamma=0.9):
+def compute_returns(rewards, gamma=1):
 	"""
 	Compute returns for each time step, given the rewards
 	  @param rewards: list of floats, where rewards[t] is the reward
@@ -146,7 +161,12 @@ def compute_returns(rewards, gamma=0.9):
 	# TODO
 	result = []
 	for i in range(len(rewards)):
-		result.append(rewards[i]*(gamma**i))
+		temp = 0.0
+		gammaAccumulated = 1/gamma
+		for j in range(i, len(rewards)):
+			gammaAccumulated = gammaAccumulated * gamma
+			temp += gammaAccumulated * rewards[j]
+		result.append(temp)
 	return result
 
 def finish_episode(saved_rewards, saved_logprobs, gamma=1.0):
@@ -167,14 +187,14 @@ def finish_episode(saved_rewards, saved_logprobs, gamma=1.0):
 def get_reward(status):
 	"""Returns a numeric given an environment status."""
 	return {
-			Environment.STATUS_VALID_MOVE  : 10, # TODO
-			Environment.STATUS_INVALID_MOVE: -10,
+			Environment.STATUS_VALID_MOVE  : 0, # TODO
+			Environment.STATUS_INVALID_MOVE: -10000,
 			Environment.STATUS_WIN         : 100,
 			Environment.STATUS_TIE         : 0,
 			Environment.STATUS_LOSE        : -100
 	}[status]
 
-def train(policy, env, gamma=1.0, log_interval=1000):
+def train(policy, env, gamma=1.0, log_interval=1000, ifSave=False):
 	"""Train policy gradient."""
 	optimizer = optim.Adam(policy.parameters(), lr=0.001)
 	scheduler = torch.optim.lr_scheduler.StepLR(
@@ -184,7 +204,7 @@ def train(policy, env, gamma=1.0, log_interval=1000):
 	avgReturn_ = []
 	i_episode_ = []
 
-	for i_episode in range(60000):
+	for i_episode in range(100000):
 		saved_rewards = []
 		saved_logprobs = []
 		state = env.reset()
@@ -208,21 +228,18 @@ def train(policy, env, gamma=1.0, log_interval=1000):
 			avgReturn_.append(running_reward / log_interval)
 			i_episode_.append(i_episode)
 			running_reward = 0
-		'''
-		if i_episode % (log_interval) == 0:
-			torch.save(policy.state_dict(),
-					   "ttt/policy-%d.pkl" % i_episode)
-		'''
+
+		if ifSave:
+			if i_episode % (log_interval) == 0:
+				torch.save(policy.state_dict(),
+						   "ttt/policy-%d.pkl" % i_episode)
+		
 		if i_episode % 1 == 0: # batch_size
 			optimizer.step()
 			scheduler.step()
 			optimizer.zero_grad()
 
-	fig = plt.figure(0)
-	plt.plot(i_episode_, avgReturn_)
-	plt.xlabel("i_episode")
-	plt.ylabel("Average Return")
-	plt.show()
+	return i_episode_, avgReturn_
 
 
 
@@ -241,7 +258,134 @@ def load_weights(policy, episode):
 	weights = torch.load("ttt/policy-%d.pkl" % episode)
 	policy.load_state_dict(weights)
 
+#----------------------------Helper functions----------------------------------
 
+def Part5a():
+	policy = Policy()
+	env = Environment()
+	i_episode_, avgReturn_ = train(policy, env, gamma=0.9,ifSave = True)
+	fig = plt.figure(0)
+	plt.plot(i_episode_, avgReturn_)
+	plt.xlabel("i_episode")
+	plt.ylabel("Average Return")
+	fig.savefig("part5a_%02.2f"%gamma) 
+	plt.show()
+
+def Part5_find_gamma():
+	import sys
+	orig_stdout = sys.stdout
+	f = open("Part5_find_gamma_output", "w")
+	sys.stdout = f
+	policy = Policy()
+
+	env = Environment()
+	for gamma in [0.1,0.3,0.5,0.7,0.9,1]:
+		print("gamma = %02.2f Begin! \n"%gamma)
+		i_episode_, avgReturn_ = train(policy, env, gamma=gamma,ifSave = False)
+		fig = plt.figure(0)
+		plt.plot(i_episode_, avgReturn_)
+		plt.xlabel("i_episode")
+		plt.ylabel("Average Return")
+		fig.savefig("part5_gamma%02.2f.png"%gamma) 
+		plt.show()
+
+	sys.stdout = orig_stdout
+	f.close()
+
+def part5b():
+	for hidden_size in [5,10,30,50,70,100,150,200]:
+		policy = Policy(hidden_size=hidden_size)
+		env = Environment()
+		i_episode_, avgReturn_ = train(policy, env, ifSave = False)
+		fig = plt.figure(0)
+		plt.plot(i_episode_, avgReturn_)
+		plt.xlabel("i_episode")
+		plt.ylabel("Average Return")
+		fig.savefig("part5b_%i"%hidden_size) 
+		plt.show()
+
+
+
+def part5d():
+	'''
+	Game render result is stored in file part5d_output
+	'''
+	import sys
+	orig_stdout = sys.stdout
+	f = open("part5d_output", "w")
+	sys.stdout = f
+
+	policy = Policy()
+	env = Environment()
+	win = 0
+	lose = 0
+	tie = 0
+	load_weights(policy, 99000)
+	for i in range(100):
+		print("Game No.%i begin!"%(i+1))
+		state = env.reset()
+		done = False
+		while not done:
+			action, logprob = select_action(policy, state)
+			state, status, done = env.play_against_random(action)
+			env.render()
+		if status == env.STATUS_WIN:
+			win += 1
+		elif status == env.STATUS_LOSE:
+			lose += 1
+		elif status == env.STATUS_TIE:
+			tie += 1
+		print("Game No.%i finished! Result: %s \n"%(i+1, status))
+
+	sys.stdout = orig_stdout
+	f.close()
+
+	print("win:%i ; lose:%i; tie:%i"%(win,lose,tie))
+
+def part6():
+	policy = Policy()
+	env = Environment()
+	win_ = []
+	lose_ = []
+	tie_ = []
+	for i_episode in range(0,100000,1000):
+		win = 0
+		lose = 0
+		tie = 0
+		load_weights(policy, i_episode)
+		for i in range(100):
+			state = env.reset()
+			done = False
+			while not done:
+				action, logprob = select_action(policy, state)
+				state, status, done = env.play_against_random(action)
+				env.render()
+			if status == env.STATUS_WIN:
+				win += 1
+			elif status == env.STATUS_LOSE:
+				lose += 1
+			elif status == env.STATUS_TIE:
+				tie += 1
+		win_.append(win/100.0)
+		lose_.append(lose/100.0)
+		tie_.append(tie/100.0)
+
+	fig = plt.figure(6)
+	plt.plot(i_episode_, win_, label="win ratio")
+	plt.plot(i_episode_, lose_, label="lose ratio")
+	plt.plot(i_episode_, tie_, label="tie ratio")
+	plt.legend(loc = "best")
+	plt.xlabel("i_episode")
+	plt.ylabel("ratio")
+	fig.savefig("part6") 
+	plt.show()
+
+def part7():
+	return
+
+
+
+'''
 if __name__ == '__main__':
 	import sys
 	policy = Policy()
@@ -256,3 +400,4 @@ if __name__ == '__main__':
 		ep = int(sys.argv[1])
 		load_weights(policy, ep)
 		print(first_move_distr(policy, env))
+'''
