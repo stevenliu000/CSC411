@@ -123,8 +123,9 @@ class Policy(nn.Module):
 		# TODO
 		self.features = nn.Sequential(
 			nn.Linear(input_size, hidden_size),
-			nn.ReLU(),
+			nn.Tanh(),
 			nn.Linear(hidden_size, output_size),
+            nn.ReLU(),
 			nn.Softmax()
 			)
 
@@ -188,7 +189,7 @@ def get_reward(status):
 	"""Returns a numeric given an environment status."""
 	return {
 			Environment.STATUS_VALID_MOVE  : 0,
-			Environment.STATUS_INVALID_MOVE: -10000,
+			Environment.STATUS_INVALID_MOVE: -1000,
 			Environment.STATUS_WIN         : 100,
 			Environment.STATUS_TIE         : 0,
 			Environment.STATUS_LOSE        : -100
@@ -261,10 +262,10 @@ def load_weights(policy, episode):
 #----------------------------Helper functions----------------------------------
 
 def Part5a():
-	policy = Policy()
+	policy = Policy(hidden_size=64)
 	env = Environment()
 	gamma = 1.0
-	i_episode_, avgReturn_ = train(policy, env, gamma=1.0,ifSave = True)
+	i_episode_, avgReturn_ = train(policy, env, gamma=gamma,ifSave = True)
 	fig = plt.figure(0)
 	plt.plot(i_episode_, avgReturn_)
 	plt.xlabel("i_episode")
@@ -314,7 +315,7 @@ def part5d():
 	f = open("part5d_output", "w")
 	sys.stdout = f
 
-	policy = Policy()
+	policy = Policy(hidden_size=64)
 	env = Environment()
 	win = 0
 	lose = 0
@@ -342,12 +343,13 @@ def part5d():
 	print("win:%i ; lose:%i; tie:%i"%(win,lose,tie))
 
 def part6():
-	policy = Policy()
+	policy = Policy(hidden_size=64)
 	env = Environment()
 	win_ = []
 	lose_ = []
 	tie_ = []
 	for i_episode in range(0,100000,1000):
+		policy = Policy(hidden_size = 64)
 		win = 0
 		lose = 0
 		tie = 0
@@ -381,31 +383,31 @@ def part6():
 	plt.show()
 
 def part7():
-    policy = Policy()
-    env = Environment()
-    moveProb_ = np.empty((0,9))
-    for i_episode_ in range(0,100000,1000):
-        load_weights(policy,i_episode_)
-        move = first_move_distr(policy, env)
-        move = np.array(move.tolist())
-        moveProb_ = np.vstack((moveProb_,move))
-        
-    fig = plt.figure(71)
-    plt.title("Learned distribution over the first move")
-    plt.imshow(moveProb_[-1,:].reshape(3,3))
-    fig.savefig("part7_fullyTrained")
-    plt.show()
-    
-    i_episode_ = range(0,100000,1000)
-    for i in range(1,10):
-        row = (i-1)/3+1
-        col = i-3*((i-1)/3)
-        fig = plt.figure(71+i)
-        plt.title("First move probability on position (%i, %i)" %(row,col))
-        plt.plot(i_episode_, moveProb_[:,i-1])
-        plt.legend(loc = "best")
-        plt.ylabel("probability")
-        fig.savefig("part7_position_%i,%i"%(row,col))
+	policy = Policy(hidden_size=64)
+	env = Environment()
+	moveProb_ = np.empty((0,9))
+	for i_episode_ in range(0,100000,1000):
+		load_weights(policy,i_episode_)
+		move = first_move_distr(policy, env)
+		move = np.array(move.tolist())
+		moveProb_ = np.vstack((moveProb_,move))
+		
+	fig = plt.figure(71)
+	plt.title("Learned distribution over the first move")
+	plt.imshow(moveProb_[-1,:].reshape(3,3))
+	fig.savefig("part7_fullyTrained")
+	plt.show()
+	
+	i_episode_ = range(0,100000,1000)
+	for i in range(1,10):
+		row = (i-1)/3+1
+		col = i-3*((i-1)/3)
+		fig = plt.figure(71+i)
+		plt.title("First move probability on position (%i, %i)" %(row,col))
+		plt.plot(i_episode_, moveProb_[:,i-1])
+		plt.legend(loc = "best")
+		plt.ylabel("probability")
+		fig.savefig("part7_position_%i,%i"%(row,col))
 
 '''
 if __name__ == '__main__':

@@ -1,269 +1,245 @@
 Game No.1 begin!
 ...
-o..
-x..
+.x.
+.o.
 ====
-...
-oxo
-x..
+..x
+.x.
+.oo
 ====
-x..
-oxo
-xo.
-====
-x.x
-oxo
-xo.
+..x
+.x.
+xoo
 ====
 Game No.1 finished! Result: win 
 
 Game No.2 begin!
 ...
-.xo
+ox.
 ...
 ====
-.o.
-.xo
 x..
+oxo
+...
 ====
-.o.
-xxo
-x.o
-====
-.ox
-xxo
-x.o
+x..
+oxo
+..x
 ====
 Game No.2 finished! Result: win 
 
 Game No.3 begin!
-o..
+..o
+.x.
 ...
-x..
 ====
-o..
-ox.
-x..
+x.o
+.xo
+...
 ====
-o.x
-ox.
-x..
+x.o
+.xo
+..x
 ====
 Game No.3 finished! Result: win 
 
 Game No.4 begin!
 ...
-.o.
-x..
-====
+.xo
 ...
-xo.
-x.o
 ====
+x..
+oxo
+...
+====
+x..
+oxo
 ..x
-xo.
-xoo
-====
-x.x
-xo.
-xoo
 ====
 Game No.4 finished! Result: win 
 
 Game No.5 begin!
+.o.
+.x.
 ...
-.x.
-..o
-====
-.o.
-.x.
-x.o
-====
-.o.
-xxo
-x.o
 ====
 .ox
-xxo
-x.o
+.x.
+o..
+====
+.ox
+ox.
+o.x
+====
+xox
+ox.
+o.x
 ====
 Game No.5 finished! Result: win 
 
 Game No.6 begin!
-...
-..o
-x..
-====
-...
-.xo
-x.o
-====
 o..
-xxo
-x.o
+.x.
+...
 ====
 o.x
-xxo
-x.o
+ox.
+...
+====
+o.x
+ox.
+x..
 ====
 Game No.6 finished! Result: win 
 
 Game No.7 begin!
-...
-...
-x.o
-====
-.ox
-...
-x.o
-====
-.ox
+.o.
 .x.
-x.o
+...
+====
+.ox
+ox.
+...
+====
+xox
+ox.
+o..
+====
+xox
+ox.
+o.x
 ====
 Game No.7 finished! Result: win 
 
 Game No.8 begin!
 ...
-ox.
+.xo
 ...
 ====
-...
-oxo
 x..
+.xo
+..o
 ====
 x..
 oxo
-xo.
+x.o
 ====
-x.x
+xx.
 oxo
-xo.
+xoo
+====
+xxx
+oxo
+xoo
 ====
 Game No.8 finished! Result: win 
 
 Game No.9 begin!
-...
-.xo
-...
-====
-...
-oxo
 x..
+...
+o..
 ====
-x.o
-oxo
-x..
+xo.
+.x.
+o..
 ====
-x.o
-oxo
-xxo
+xo.
+.x.
+o.x
 ====
-Game No.9 finished! Result: lose 
+Game No.9 finished! Result: win 
 
 Game No.10 begin!
-..o
-.x.
 ...
+.x.
+o..
 ====
 ..o
 .x.
-xo.
-====
-..o
-xx.
-xoo
+o.x
 ====
 x.o
-xx.
-xoo
+.x.
+o.x
 ====
 Game No.10 finished! Result: win 
 
 Game No.11 begin!
-...
-...
 xo.
+...
+...
 ====
 xo.
+ox.
 ...
-xo.
 ====
-xo.
-x..
+xox
+ox.
+.o.
+====
+xox
+ox.
 xo.
 ====
 Game No.11 finished! Result: win 
 
 Game No.12 begin!
 ...
-o..
+.xo
+...
+====
 x..
+oxo
+...
 ====
-..o
-ox.
 x..
-====
-.oo
-ox.
-x.x
-====
-xoo
-ox.
-x.x
+oxo
+..x
 ====
 Game No.12 finished! Result: win 
 
 Game No.13 begin!
-.o.
+xo.
 ...
-x..
+...
 ====
+xo.
+.x.
 .o.
-ox.
-x..
 ====
+xo.
+.x.
 .ox
-ox.
-x..
 ====
 Game No.13 finished! Result: win 
 
 Game No.14 begin!
 ...
-...
-xo.
-====
-x..
-...
-xoo
+.x.
+o..
 ====
 x.o
 .x.
-xoo
+o..
 ====
 x.o
-xx.
-xoo
+.x.
+o.x
 ====
 Game No.14 finished! Result: win 
 
 Game No.15 begin!
-..o
-.x.
+x..
+o..
 ...
 ====
-..o
-.x.
-xo.
+x..
+ox.
+o..
 ====
-x.o
-.xo
-xo.
-====
-x.o
-xxo
-xo.
+x..
+ox.
+o.x
 ====
 Game No.15 finished! Result: win 
 
@@ -272,51 +248,43 @@ Game No.16 begin!
 .xo
 ...
 ====
-...
+x..
 .xo
-x.o
+o..
 ====
-.o.
-xxo
-x.o
-====
-.ox
-xxo
-x.o
+x..
+.xo
+o.x
 ====
 Game No.16 finished! Result: win 
 
 Game No.17 begin!
 ...
-...
-xo.
-====
-x..
+.x.
 o..
-xo.
-====
-xo.
-ox.
-xo.
-====
-xo.
-ox.
-xox
-====
-Game No.17 finished! Result: win 
-
-Game No.18 begin!
-o..
-...
-x..
 ====
 o..
 .x.
-x.o
+o.x
 ====
 o.x
-.x.
+ox.
+o.x
+====
+Game No.17 finished! Result: lose 
+
+Game No.18 begin!
+...
+.xo
+...
+====
 x.o
+.xo
+...
+====
+x.o
+.xo
+..x
 ====
 Game No.18 finished! Result: win 
 
@@ -325,263 +293,251 @@ Game No.19 begin!
 .x.
 .o.
 ====
-...
-ox.
-xo.
+x..
+.x.
+oo.
 ====
-..x
-ox.
-xo.
+x..
+.x.
+oox
 ====
 Game No.19 finished! Result: win 
 
 Game No.20 begin!
 ...
+ox.
 ...
-xo.
-====
-..o
-x..
-xo.
 ====
 x.o
-x..
-xo.
+ox.
+...
+====
+x.o
+ox.
+..x
 ====
 Game No.20 finished! Result: win 
 
 Game No.21 begin!
-...
-...
-xo.
-====
-x..
-...
-xoo
-====
-xo.
+o..
 .x.
-xoo
+...
 ====
-xo.
-xx.
-xoo
+oox
+.x.
+...
+====
+oox
+.x.
+x..
 ====
 Game No.21 finished! Result: win 
 
 Game No.22 begin!
 o..
-...
-x..
-====
-oo.
 .x.
-x..
-====
-oo.
-xx.
-xo.
-====
-oo.
-xxo
-xox
-====
-oox
-xxo
-xox
-====
-Game No.22 finished! Result: win 
-
-Game No.23 begin!
-...
-.xo
 ...
 ====
+o.x
+.x.
 ..o
-.xo
-x..
-====
-.oo
-xxo
-x..
-====
-ooo
-xxo
-x.x
-====
-Game No.23 finished! Result: lose 
-
-Game No.24 begin!
-...
-.o.
-x..
-====
-x..
-.o.
-xo.
-====
-x..
-xo.
-xo.
-====
-Game No.24 finished! Result: win 
-
-Game No.25 begin!
-...
-.o.
-x..
-====
-..x
-.o.
-x.o
-====
-xox
-.o.
-x.o
-====
-xox
-oox
-x.o
-====
-xox
-oox
-xxo
-====
-Game No.25 finished! Result: tie 
-
-Game No.26 begin!
-o..
-...
-x..
-====
-o..
-.x.
-x.o
 ====
 o.x
 .x.
 x.o
 ====
-Game No.26 finished! Result: win 
+Game No.22 finished! Result: win 
+
+Game No.23 begin!
+...
+.x.
+.o.
+====
+xo.
+.x.
+.o.
+====
+xo.
+.x.
+.ox
+====
+Game No.23 finished! Result: win 
+
+Game No.24 begin!
+...
+ox.
+...
+====
+x.o
+ox.
+...
+====
+x.o
+ox.
+x.o
+====
+xxo
+oxo
+x.o
+====
+Game No.24 finished! Result: lose 
+
+Game No.25 begin!
+...
+ox.
+...
+====
+x.o
+ox.
+...
+====
+x.o
+ox.
+..x
+====
+Game No.25 finished! Result: win 
+
+Game No.26 begin!
+o..
+.x.
+...
+====
+o..
+ox.
+..x
+====
+o..
+ox.
+xox
+====
+oxo
+ox.
+xox
+====
+oxo
+oxx
+xox
+====
+Game No.26 finished! Result: tie 
 
 Game No.27 begin!
+x..
+o..
 ...
-.o.
+====
+x.o
+ox.
+...
+====
+xoo
+ox.
 x..
 ====
-xo.
-.o.
-x..
-====
-xo.
-xo.
-x..
+xoo
+ox.
+x.x
 ====
 Game No.27 finished! Result: win 
 
 Game No.28 begin!
-.o.
 ...
-x..
+.x.
+o..
 ====
-.o.
-x..
-xo.
+...
+.xo
+o.x
 ====
-xo.
 x..
-xo.
+.xo
+o.x
 ====
 Game No.28 finished! Result: win 
 
 Game No.29 begin!
 ...
 .x.
-o..
-====
 ..o
-xx.
-o..
 ====
-xoo
-xx.
-o..
+x..
+.xo
+..o
 ====
-xoo
-xx.
-o.x
+xo.
+.xo
+x.o
+====
+xox
+.xo
+x.o
 ====
 Game No.29 finished! Result: win 
 
 Game No.30 begin!
 ...
+ox.
 ...
-x.o
 ====
-o..
-.x.
-x.o
+x..
+ox.
+.o.
 ====
-o..
-xxo
-x.o
-====
-o.x
-xxo
-x.o
+x..
+ox.
+.ox
 ====
 Game No.30 finished! Result: win 
 
 Game No.31 begin!
+.o.
+.x.
 ...
-..o
-x..
-====
-.o.
-x.o
-x..
-====
-.o.
-xxo
-xo.
 ====
 xo.
-xxo
+.xo
+...
+====
 xo.
+.xo
+..x
 ====
 Game No.31 finished! Result: win 
 
 Game No.32 begin!
-.o.
-.x.
 ...
-====
-.o.
 .x.
+..o
+====
+x..
+ox.
+..o
+====
+x.o
+ox.
 x.o
 ====
-.oo
-xx.
-x.o
-====
+xxo
+ox.
 xoo
-xx.
-x.o
 ====
-Game No.32 finished! Result: win 
+xxo
+oxx
+xoo
+====
+Game No.32 finished! Result: tie 
 
 Game No.33 begin!
-o..
-.x.
 ...
-====
-o..
 .x.
-x.o
+.o.
 ====
-o.x
+xo.
 .x.
-x.o
+.o.
+====
+xo.
+.x.
+.ox
 ====
 Game No.33 finished! Result: win 
 
@@ -590,35 +546,35 @@ Game No.34 begin!
 .x.
 o..
 ====
-...
-xxo
-o..
+x..
+.x.
+oo.
 ====
 x..
-xxo
-oo.
-====
-xxo
-xxo
-oo.
-====
-xxo
-xxo
+.x.
 oox
 ====
 Game No.34 finished! Result: win 
 
 Game No.35 begin!
 ...
-...
-x.o
+.x.
+.o.
 ====
-...
 x..
+.x.
+.oo
+====
+x..
+ox.
 xoo
 ====
-x..
-x..
+xx.
+oxo
+xoo
+====
+xxx
+oxo
 xoo
 ====
 Game No.35 finished! Result: win 
@@ -628,783 +584,715 @@ Game No.36 begin!
 .x.
 .o.
 ====
-...
-.xo
-xo.
-====
+x.o
+.x.
 .o.
-xxo
-xo.
 ====
-xo.
-xxo
-xo.
+x.o
+.x.
+.ox
 ====
 Game No.36 finished! Result: win 
 
 Game No.37 begin!
-...
+..o
 .x.
-.o.
-====
-o..
-.x.
-xo.
-====
-o.o
-xx.
-xo.
-====
-ooo
-xx.
-xox
-====
-Game No.37 finished! Result: lose 
-
-Game No.38 begin!
-...
-ox.
 ...
 ====
 ..o
-ox.
+.xo
+..x
+====
+x.o
+.xo
+..x
+====
+Game No.37 finished! Result: win 
+
+Game No.38 begin!
 x..
+o..
+...
 ====
-x.o
-ox.
 xo.
-====
-x.o
 ox.
-xox
+...
+====
+xo.
+ox.
+..x
 ====
 Game No.38 finished! Result: win 
 
 Game No.39 begin!
-..o
 ...
-x..
-====
-..o
 ox.
-x..
-====
-..o
-oxo
-x.x
+...
 ====
 x.o
-oxo
-x.x
+ox.
+...
+====
+x.o
+ox.
+..x
 ====
 Game No.39 finished! Result: win 
 
 Game No.40 begin!
 ...
-.x.
-o..
+ox.
+...
 ====
-.o.
-xx.
-o..
+x.o
+ox.
+...
 ====
-.oo
-xx.
-o.x
-====
-xoo
-xx.
-o.x
+x.o
+ox.
+..x
 ====
 Game No.40 finished! Result: win 
 
 Game No.41 begin!
-o..
 ...
-x..
-====
-o..
 ox.
-x..
+...
 ====
-o.x
+..o
 ox.
-x..
+..x
+====
+x.o
+ox.
+..x
 ====
 Game No.41 finished! Result: win 
 
 Game No.42 begin!
-...
-...
-xo.
-====
-.ox
-...
-xo.
-====
-xox
+x..
 o..
-xo.
+...
 ====
-xox
-o.x
-xoo
+x..
+ox.
+.o.
 ====
-xox
-oxx
-xoo
+x..
+ox.
+.ox
 ====
 Game No.42 finished! Result: win 
 
 Game No.43 begin!
-..o
-.x.
 ...
-====
+.x.
 ..o
-.xo
-x..
 ====
+.ox
+.x.
 ..o
-xxo
-xo.
 ====
+.ox
+.x.
 x.o
-xxo
-xo.
 ====
 Game No.43 finished! Result: win 
 
 Game No.44 begin!
-o..
 ...
-x..
-====
-o..
 .x.
-xo.
+.o.
 ====
-o.o
-xx.
-xo.
+x..
+.xo
+.o.
 ====
-ooo
-xx.
-xox
+x..
+.xo
+.ox
 ====
-Game No.44 finished! Result: lose 
+Game No.44 finished! Result: win 
 
 Game No.45 begin!
-.o.
-.x.
 ...
-====
-.o.
 .x.
-x.o
+o..
 ====
-.o.
-xxo
-x.o
+...
+.x.
+oox
 ====
-.ox
-xxo
-x.o
+x..
+.x.
+oox
 ====
 Game No.45 finished! Result: win 
 
 Game No.46 begin!
-.o.
 ...
-x..
-====
+.x.
 .o.
-.xo
+====
 x..
+.x.
+oo.
 ====
-.oo
-xxo
 x..
-====
-.oo
-xxo
-xox
-====
-xoo
-xxo
-xox
+.x.
+oox
 ====
 Game No.46 finished! Result: win 
 
 Game No.47 begin!
 ...
-...
+.x.
+..o
+====
+.ox
+.x.
+..o
+====
+.ox
+.x.
 x.o
-====
-...
-.x.
-xoo
-====
-..x
-.x.
-xoo
 ====
 Game No.47 finished! Result: win 
 
 Game No.48 begin!
+..o
+.x.
 ...
-...
+====
+x.o
+.x.
+..o
+====
+xoo
+.x.
 x.o
 ====
-...
-.x.
 xoo
-====
-.o.
 xx.
-xoo
-====
-xo.
-xx.
-xoo
+x.o
 ====
 Game No.48 finished! Result: win 
 
 Game No.49 begin!
 ...
+ox.
 ...
-x.o
 ====
-o..
-.x.
 x.o
+ox.
+...
 ====
-o.x
-.x.
 x.o
+ox.
+..x
 ====
 Game No.49 finished! Result: win 
 
 Game No.50 begin!
-o..
 ...
+ox.
+...
+====
 x..
+ox.
+..o
 ====
-o..
-.xo
 x..
+ox.
+xoo
 ====
-o.o
-xxo
-x..
+x.x
+ox.
+xoo
 ====
-o.o
-xxo
-xxo
-====
-Game No.50 finished! Result: lose 
+Game No.50 finished! Result: win 
 
 Game No.51 begin!
+..o
+.x.
 ...
-.x.
-.o.
 ====
-o..
-.x.
-xo.
+x.o
+.xo
+...
 ====
-o.x
-.x.
-xo.
+x.o
+.xo
+..x
 ====
 Game No.51 finished! Result: win 
 
 Game No.52 begin!
-..o
+.o.
+.x.
 ...
-x..
 ====
-..o
+.ox
+ox.
+...
+====
+.ox
 ox.
 x..
-====
-xoo
-ox.
-x..
-====
-xoo
-ox.
-x.x
 ====
 Game No.52 finished! Result: win 
 
 Game No.53 begin!
-...
 ..o
-x..
+.x.
+...
 ====
-o..
-.xo
-x..
+x.o
+.x.
+.o.
 ====
-o..
-xxo
-xo.
-====
-ox.
-xxo
-xoo
-====
-oxx
-xxo
-xoo
+x.o
+.x.
+.ox
 ====
 Game No.53 finished! Result: win 
 
 Game No.54 begin!
-...
-...
-xo.
-====
-x..
 .o.
-xo.
+.x.
+...
 ====
-x..
-xo.
+.ox
+.x.
+.o.
+====
+.ox
+.x.
 xo.
 ====
 Game No.54 finished! Result: win 
 
 Game No.55 begin!
-.o.
+o..
 .x.
 ...
 ====
-.o.
+o.o
 .x.
-x.o
+..x
 ====
-.o.
-xx.
-xoo
+o.o
+ox.
+x.x
 ====
-xo.
-xx.
-xoo
+oxo
+oxo
+x.x
+====
+oxo
+oxo
+xxx
 ====
 Game No.55 finished! Result: win 
 
 Game No.56 begin!
-o..
+.o.
+.x.
 ...
-x..
 ====
-o..
-.xo
-x..
+.ox
+.x.
+.o.
 ====
-o.o
+.ox
+.x.
+oox
+====
+.ox
 xxo
-x..
+oox
 ====
-o.o
-xxo
 xox
-====
-oxo
 xxo
-xox
+oox
 ====
-Game No.56 finished! Result: tie 
+Game No.56 finished! Result: win 
 
 Game No.57 begin!
 ...
-...
-x.o
-====
-...
 .x.
-xoo
+.o.
 ====
 x..
-ox.
-xoo
+.xo
+.o.
 ====
-x.x
-ox.
-xoo
+x..
+.xo
+.ox
 ====
 Game No.57 finished! Result: win 
 
 Game No.58 begin!
-o..
 ...
-x..
-====
-o..
 ox.
-x..
+...
 ====
-o.x
-ox.
 x..
+ox.
+.o.
+====
+x..
+ox.
+.ox
 ====
 Game No.58 finished! Result: win 
 
 Game No.59 begin!
-..o
 ...
-x..
-====
-.oo
 .x.
-x..
+..o
 ====
-.oo
-xx.
-x.o
+o.x
+.x.
+..o
 ====
-xoo
-xx.
+o.x
+.x.
 x.o
 ====
 Game No.59 finished! Result: win 
 
 Game No.60 begin!
 ...
-.o.
-x..
+.x.
+o..
 ====
-...
-xo.
-x.o
+..x
+ox.
+o..
 ====
-x..
-xo.
-x.o
+..x
+oxo
+o.x
+====
+x.x
+oxo
+o.x
 ====
 Game No.60 finished! Result: win 
 
 Game No.61 begin!
+o..
+.x.
 ...
-..o
-x..
 ====
+o.x
+.x.
 .o.
-x.o
-x..
 ====
-.ox
-x.o
-x.o
-====
-.ox
-xxo
-x.o
+o.x
+.x.
+xo.
 ====
 Game No.61 finished! Result: win 
 
 Game No.62 begin!
-o..
 ...
-x..
-====
-oox
-...
-x..
-====
-oox
 .x.
-x..
+.o.
+====
+xo.
+.x.
+.o.
+====
+xo.
+.x.
+.ox
 ====
 Game No.62 finished! Result: win 
 
 Game No.63 begin!
 .o.
+.x.
 ...
-x..
 ====
-.o.
-xo.
-x..
+.ox
+.x.
+o..
 ====
-oo.
-xo.
-x.x
+.ox
+.xo
+o.x
 ====
 oox
-xo.
-xox
+xxo
+o.x
 ====
-Game No.63 finished! Result: lose 
+oox
+xxo
+oxx
+====
+Game No.63 finished! Result: tie 
 
 Game No.64 begin!
 ...
 .x.
-o..
+..o
 ====
-o..
-xx.
-o..
+x..
+.x.
+.oo
 ====
-oo.
-xx.
-o.x
+x..
+ox.
+xoo
 ====
-oox
-xx.
-oox
-====
-oox
-xxx
-oox
+x.x
+ox.
+xoo
 ====
 Game No.64 finished! Result: win 
 
 Game No.65 begin!
+..o
+.x.
 ...
-...
-xo.
 ====
-x..
-...
-xoo
+x.o
+.x.
+o..
 ====
-x..
-x..
-xoo
+x.o
+.x.
+o.x
 ====
 Game No.65 finished! Result: win 
 
 Game No.66 begin!
+x..
+.o.
 ...
-.x.
-..o
 ====
-..o
-.x.
-x.o
+x.x
+.oo
+...
 ====
-..o
-xxo
-x.o
+xox
+.oo
+..x
+====
+xox
+ooo
+x.x
 ====
 Game No.66 finished! Result: lose 
 
 Game No.67 begin!
 ...
-.o.
-x..
-====
-xo.
-.o.
-x..
-====
-xo.
-xo.
-x..
-====
-Game No.67 finished! Result: win 
-
-Game No.68 begin!
-.o.
 .x.
-...
+..o
 ====
-.o.
+x.o
 .x.
+..o
+====
+x.o
+ox.
 x.o
 ====
-.o.
-xx.
-xoo
+xxo
+oxo
+x.o
 ====
-.ox
-xx.
-xoo
+Game No.67 finished! Result: lose 
+
+Game No.68 begin!
+...
+.x.
+o..
+====
+...
+.xo
+o.x
+====
+x..
+.xo
+o.x
 ====
 Game No.68 finished! Result: win 
 
 Game No.69 begin!
 ...
+.xo
 ...
-x.o
 ====
-..o
-.x.
-x.o
+x..
+.xo
+.o.
 ====
-..o
-xxo
-x.o
+x..
+.xo
+.ox
 ====
-Game No.69 finished! Result: lose 
+Game No.69 finished! Result: win 
 
 Game No.70 begin!
-..o
-.x.
 ...
-====
-.oo
 .x.
-x..
+o..
 ====
-ooo
-xx.
-x..
+..x
+.x.
+oo.
 ====
-Game No.70 finished! Result: lose 
+..x
+.xo
+oox
+====
+x.x
+.xo
+oox
+====
+Game No.70 finished! Result: win 
 
 Game No.71 begin!
-..o
+.o.
 .x.
 ...
 ====
-.oo
+oox
+.x.
+...
+====
+oox
 .x.
 x..
-====
-.oo
-xx.
-xo.
-====
-.oo
-xxo
-xox
-====
-xoo
-xxo
-xox
 ====
 Game No.71 finished! Result: win 
 
 Game No.72 begin!
 ...
-o..
-x..
+.x.
+..o
 ====
-...
-oxo
-x..
+xo.
+.x.
+..o
 ====
-x.o
-oxo
-x..
+xo.
+.x.
+xoo
 ====
-x.o
-oxo
-xxo
+xo.
+xx.
+xoo
 ====
-Game No.72 finished! Result: lose 
+Game No.72 finished! Result: win 
 
 Game No.73 begin!
 ...
 .xo
 ...
 ====
-.o.
+x..
 .xo
-x..
+..o
 ====
-.oo
-xxo
 x..
+oxo
+x.o
 ====
-ooo
 xxo
-x.x
+oxo
+x.o
 ====
 Game No.73 finished! Result: lose 
 
 Game No.74 begin!
-o..
 ...
+.xo
+...
+====
 x..
+.xo
+o..
 ====
-oo.
-.x.
 x..
-====
-oo.
-xx.
-x.o
-====
-oox
-xx.
-x.o
+.xo
+o.x
 ====
 Game No.74 finished! Result: win 
 
 Game No.75 begin!
-..o
-.x.
+...
+ox.
 ...
 ====
-..o
-.x.
-xo.
+x..
+ox.
+o..
 ====
-x.o
-.xo
-xo.
-====
-x.o
-xxo
-xo.
+x..
+ox.
+o.x
 ====
 Game No.75 finished! Result: win 
 
 Game No.76 begin!
-o..
 ...
-x..
-====
-o.o
 .x.
+..o
+====
 x..
+.xo
+..o
 ====
-o.o
+x..
+.xo
+xoo
+====
 xx.
-x.o
+oxo
+xoo
 ====
-o.o
 xxx
-x.o
+oxo
+xoo
 ====
 Game No.76 finished! Result: win 
 
 Game No.77 begin!
 ...
-...
-x.o
+.x.
+o..
 ====
-..x
-..o
 x.o
+.x.
+o..
 ====
-..x
-.xo
 x.o
+.x.
+o.x
 ====
 Game No.77 finished! Result: win 
 
 Game No.78 begin!
 ...
-...
-x.o
-====
-...
 .x.
-xoo
+..o
 ====
-x..
-.xo
-xoo
+..x
+.x.
+o.o
 ====
-x..
-xxo
-xoo
+x.x
+ox.
+o.o
+====
+xxx
+ox.
+o.o
 ====
 Game No.78 finished! Result: win 
 
@@ -1413,168 +1301,160 @@ Game No.79 begin!
 .x.
 o..
 ====
-...
-xx.
+..x
+.x.
 oo.
 ====
-xo.
-xx.
-oo.
+.ox
+.x.
+oox
 ====
-xo.
+oox
 xx.
+oox
+====
+oox
+xxx
 oox
 ====
 Game No.79 finished! Result: win 
 
 Game No.80 begin!
-..o
 ...
-x..
-====
-.oo
 .x.
+.o.
+====
 x..
+ox.
+.o.
 ====
-.oo
-xxo
 x..
-====
-.oo
-xxo
-xox
-====
-xoo
-xxo
-xox
+ox.
+.ox
 ====
 Game No.80 finished! Result: win 
 
 Game No.81 begin!
-o..
 ...
-x..
-====
-o..
 .x.
-xo.
-====
 o..
-xxo
-xo.
 ====
-oxo
-xxo
-xo.
+.ox
+.x.
+o..
 ====
-oxo
+.ox
+xx.
+oo.
+====
+.ox
 xxo
+oox
+====
 xox
+xxo
+oox
 ====
-Game No.81 finished! Result: tie 
+Game No.81 finished! Result: win 
 
 Game No.82 begin!
-..o
 ...
-x..
-====
+.x.
 ..o
-ox.
-x..
 ====
+..x
+ox.
+..o
+====
+..x
+ox.
 x.o
-ox.
-x.o
 ====
-xoo
-ox.
-xxo
-====
-xoo
-oxx
-xxo
-====
-Game No.82 finished! Result: tie 
+Game No.82 finished! Result: win 
 
 Game No.83 begin!
-o..
-.x.
+...
+ox.
 ...
 ====
-o.o
-.x.
 x..
+ox.
+.o.
 ====
-o.o
-xx.
-xo.
+x..
+ox.
+.ox
 ====
-ooo
-xx.
-xox
-====
-Game No.83 finished! Result: lose 
+Game No.83 finished! Result: win 
 
 Game No.84 begin!
-..o
 ...
-x..
-====
-..o
 .x.
-x.o
+o..
 ====
-..o
-xxo
-x.o
+...
+.xo
+o.x
 ====
-Game No.84 finished! Result: lose 
+x..
+.xo
+o.x
+====
+Game No.84 finished! Result: win 
 
 Game No.85 begin!
 ...
-...
-xo.
+.x.
+o..
 ====
 ...
-x.o
-xo.
+.x.
+oox
 ====
 x..
-x.o
-xo.
+.x.
+oox
 ====
 Game No.85 finished! Result: win 
 
 Game No.86 begin!
 ...
-ox.
+.xo
 ...
 ====
-o..
-ox.
 x..
+.xo
+..o
 ====
-o.x
-ox.
 x..
+.xo
+xoo
+====
+xx.
+oxo
+xoo
+====
+xxx
+oxo
+xoo
 ====
 Game No.86 finished! Result: win 
 
 Game No.87 begin!
 ...
+.xo
 ...
+====
+x..
+.xo
+..o
+====
+xo.
+.xo
 x.o
 ====
-..x
-.o.
-x.o
-====
-..x
-xoo
-x.o
-====
-x.x
-xoo
+xox
+.xo
 x.o
 ====
 Game No.87 finished! Result: win 
@@ -1582,231 +1462,219 @@ Game No.87 finished! Result: win
 Game No.88 begin!
 ...
 .x.
-.o.
-====
 ..o
-.x.
-xo.
 ====
-x.o
-ox.
-xo.
+..x
+.xo
+..o
 ====
-x.o
-oxx
-xoo
+x.x
+.xo
+o.o
 ====
-xxo
-oxx
-xoo
+xxx
+.xo
+o.o
 ====
-Game No.88 finished! Result: tie 
+Game No.88 finished! Result: win 
 
 Game No.89 begin!
-..o
-.x.
+...
+.xo
 ...
 ====
-.oo
-.x.
 x..
+.xo
+.o.
 ====
-ooo
-xx.
 x..
+.xo
+.ox
 ====
-Game No.89 finished! Result: lose 
+Game No.89 finished! Result: win 
 
 Game No.90 begin!
 ...
-o..
-x..
-====
+ox.
 ...
-ox.
-x.o
 ====
-..x
+x..
 ox.
-x.o
+o..
+====
+x..
+ox.
+o.x
 ====
 Game No.90 finished! Result: win 
 
 Game No.91 begin!
+.o.
+.x.
 ...
-ox.
-...
 ====
-..o
-ox.
-x..
-====
-..o
-ox.
-xox
-====
-x.o
-ox.
-xox
-====
-Game No.91 finished! Result: win 
-
-Game No.92 begin!
-...
-...
-x.o
-====
-...
-.xo
-x.o
-====
-..o
-xxo
-x.o
-====
-Game No.92 finished! Result: lose 
-
-Game No.93 begin!
-...
+.ox
 .x.
 o..
 ====
-...
-xx.
-o.o
+oox
+.x.
+o.x
 ====
-.ox
-xx.
-o.o
+oox
+xxo
+o.x
+====
+oox
+xxo
+oxx
+====
+Game No.91 finished! Result: tie 
+
+Game No.92 begin!
+...
+.xo
+...
+====
+x..
+.xo
+..o
+====
+xo.
+.xo
+x.o
 ====
 xox
-xx.
+.xo
+x.o
+====
+Game No.92 finished! Result: win 
+
+Game No.93 begin!
+x.o
+...
+...
+====
+x.o
+.o.
+..x
+====
+x.o
+oo.
+x.x
+====
+xxo
 ooo
+x.x
 ====
 Game No.93 finished! Result: lose 
 
 Game No.94 begin!
 ...
-.o.
-x..
+.x.
+o..
 ====
 ...
-xo.
-x.o
+.xo
+o.x
 ====
 x..
-xo.
-x.o
+.xo
+o.x
 ====
 Game No.94 finished! Result: win 
 
 Game No.95 begin!
+..o
+.x.
 ...
-..o
-x..
 ====
-x..
-..o
-xo.
-====
-x..
 x.o
-xo.
+.x.
+..o
+====
+x.o
+.x.
+xoo
+====
+x.o
+xx.
+xoo
 ====
 Game No.95 finished! Result: win 
 
 Game No.96 begin!
-.o.
+o..
+.x.
 ...
-x..
 ====
-.o.
-ox.
-x..
+oox
+.x.
+...
 ====
-.ox
-ox.
+oox
+.x.
 x..
 ====
 Game No.96 finished! Result: win 
 
 Game No.97 begin!
-...
-ox.
+..o
+.x.
 ...
 ====
-...
-ox.
 x.o
+.x.
+.o.
 ====
-..x
-ox.
 x.o
+.x.
+.ox
 ====
 Game No.97 finished! Result: win 
 
 Game No.98 begin!
-.o.
 ...
-x..
-====
-.o.
 .x.
-x.o
+o..
 ====
-.oo
-xx.
-x.o
+...
+.x.
+oox
 ====
-xoo
-xx.
-x.o
+x..
+.x.
+oox
 ====
 Game No.98 finished! Result: win 
 
 Game No.99 begin!
+.o.
+.x.
+...
+====
+.ox
+ox.
+...
+====
+.ox
+ox.
+x..
+====
+Game No.99 finished! Result: win 
+
+Game No.100 begin!
 ...
 .x.
 .o.
 ====
-o..
+xo.
 .x.
+.o.
+====
 xo.
-====
-o.o
-xx.
-xo.
-====
-o.o
-xxo
-xox
-====
-oxo
-xxo
-xox
-====
-Game No.99 finished! Result: tie 
-
-Game No.100 begin!
-...
-...
-xo.
-====
-x..
-o..
-xo.
-====
-x..
-oxo
-xo.
-====
-xxo
-oxo
-xo.
-====
-xxo
-oxo
-xox
+.x.
+.ox
 ====
 Game No.100 finished! Result: win 
 
