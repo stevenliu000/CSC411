@@ -187,7 +187,7 @@ def finish_episode(saved_rewards, saved_logprobs, gamma=1.0):
 def get_reward(status):
 	"""Returns a numeric given an environment status."""
 	return {
-			Environment.STATUS_VALID_MOVE  : 0, # TODO
+			Environment.STATUS_VALID_MOVE  : 0,
 			Environment.STATUS_INVALID_MOVE: -10000,
 			Environment.STATUS_WIN         : 100,
 			Environment.STATUS_TIE         : 0,
@@ -198,7 +198,7 @@ def train(policy, env, gamma=1.0, log_interval=1000, ifSave=False):
 	"""Train policy gradient."""
 	optimizer = optim.Adam(policy.parameters(), lr=0.001)
 	scheduler = torch.optim.lr_scheduler.StepLR(
-			optimizer, step_size=10000, gamma=0.9)
+			optimizer, step_size=10000, gamma=1.0)
 	running_reward = 0
 
 	avgReturn_ = []
@@ -263,12 +263,13 @@ def load_weights(policy, episode):
 def Part5a():
 	policy = Policy()
 	env = Environment()
-	i_episode_, avgReturn_ = train(policy, env, gamma=0.9,ifSave = True)
+	gamma = 1.0
+	i_episode_, avgReturn_ = train(policy, env, gamma=1.0,ifSave = True)
 	fig = plt.figure(0)
 	plt.plot(i_episode_, avgReturn_)
 	plt.xlabel("i_episode")
 	plt.ylabel("Average Return")
-	fig.savefig("part5a_%02.2f"%gamma) 
+	fig.savefig("part5a.png") 
 	plt.show()
 
 def Part5_find_gamma():
@@ -303,8 +304,6 @@ def part5b():
 		plt.ylabel("Average Return")
 		fig.savefig("part5b_%i"%hidden_size) 
 		plt.show()
-
-
 
 def part5d():
 	'''
@@ -359,7 +358,7 @@ def part6():
 			while not done:
 				action, logprob = select_action(policy, state)
 				state, status, done = env.play_against_random(action)
-				env.render()
+				# env.render()
 			if status == env.STATUS_WIN:
 				win += 1
 			elif status == env.STATUS_LOSE:
@@ -370,20 +369,43 @@ def part6():
 		lose_.append(lose/100.0)
 		tie_.append(tie/100.0)
 
+	i_episode_ = range(0,100000,1000)
 	fig = plt.figure(6)
 	plt.plot(i_episode_, win_, label="win ratio")
 	plt.plot(i_episode_, lose_, label="lose ratio")
 	plt.plot(i_episode_, tie_, label="tie ratio")
-	plt.legend(loc = "best")
+	plt.legend(loc = "center right")
 	plt.xlabel("i_episode")
 	plt.ylabel("ratio")
 	fig.savefig("part6") 
 	plt.show()
 
 def part7():
-	return
-
-
+    policy = Policy()
+    env = Environment()
+    moveProb_ = np.empty((0,9))
+    for i_episode_ in range(0,100000,1000):
+        load_weights(policy,i_episode_)
+        move = first_move_distr(policy, env)
+        move = np.array(move.tolist())
+        moveProb_ = np.vstack((moveProb_,move))
+        
+    fig = plt.figure(71)
+    plt.title("Learned distribution over the first move")
+    plt.imshow(moveProb_[-1,:].reshape(3,3))
+    fig.savefig("part7_fullyTrained")
+    plt.show()
+    
+    i_episode_ = range(0,100000,1000)
+    for i in range(1,10):
+        row = (i-1)/3+1
+        col = i-3*((i-1)/3)
+        fig = plt.figure(71+i)
+        plt.title("First move probability on position (%i, %i)" %(row,col))
+        plt.plot(i_episode_, moveProb_[:,i-1])
+        plt.legend(loc = "best")
+        plt.ylabel("probability")
+        fig.savefig("part7_position_%i,%i"%(row,col))
 
 '''
 if __name__ == '__main__':
